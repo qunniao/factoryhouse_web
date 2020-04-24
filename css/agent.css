@@ -1,0 +1,589 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+#header {
+    width: 100%;
+}
+
+.top {
+    height: 33px;
+    background-color: #EEEEEE;
+}
+
+.container {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.container .left {
+    font-size: 12px;
+    line-height: 33px;
+    color: #333333;
+}
+
+.bottom {
+    border-bottom: 2px solid #f39800;
+}
+
+.top .right {
+    float: right;
+    margin-top: -27px;
+}
+
+.right .login_nav li {
+    float: left;
+    margin-left: 18px;
+}
+
+.login_nav {
+    display: block;
+    list-style-type: none;
+}
+
+.right .login_nav li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.search_wapper a {
+    text-decoration: none;
+    position: relative;
+}
+
+.search_wapper p {
+    position: relative;
+    top: 35px;
+    left: 10px;
+    font-size: 12px;
+    color: #C2C2C2;
+}
+
+#asd {
+    position: relative;
+    left: 0;
+}
+
+.search_wapper h3 {
+    color: #383635;
+    font-size: 22px;
+    position: relative;
+    left: 10px;
+    top: 35px;
+    letter-spacing: 20px;
+}
+
+.search_wapper img {
+    float: left;
+    margin-top: 27px;
+    width: 70px;
+}
+
+.location {
+    float: left;
+    margin: 42px 0px 0px 30px;
+    border: 1px solid #dcdcdc;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.location span {
+    font-size: 12px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    color: #333333
+}
+
+.search_box {
+    position: relative;
+    float: right;
+    margin-top: 35px;
+    border: 1px solid #f39800;
+    border-radius: 8px;
+}
+
+.search_box input {
+    width: 415px;
+    height: 40px;
+    border: 0;
+    float: left;
+    border-radius: 8px;
+    text-indent: 30px;
+}
+
+.search_box .search_btn {
+    width: 80px;
+    height: 40px;
+    float: left;
+    background-color: #f39800;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.publish_btn {
+    float: right;
+    color: #f39800;
+    border: 1px solid #f39800;
+    border-radius: 8px;
+    margin-top: 35px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 30px;
+    padding: 0px 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.main_nav {
+    position: absolute;
+    top: 114px;
+    width: 1200px;
+    height: 42px;
+}
+
+.main_nav .tab {
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333333;
+    position: relative;
+    float: left;
+    text-decoration: none;
+}
+
+.agent_wapper {
+    background: #FFFFFF;
+    padding: 50px 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.agent_wapper .agent_condition {
+    padding: 10px 20px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+
+.agent_wapper .agent_condition .subtitle {
+    font-size: 12px;
+    width: 80px;
+    color: #333333;
+    float: left;
+    padding: 10px 0;
+}
+
+.agent_wapper .agent_condition .block {
+    float: left;
+    width: 1078px;
+}
+
+.agent_wapper .agent_condition .block .list {
+    overflow: hidden;
+    padding: 6px 10px 2px;
+    list-style-type: none;
+}
+
+.agent_wapper .agent_condition .block .list li {
+    padding: 0 0 8px 0;
+    float: left;
+    margin-right: 30px;
+    color: #333333;
+}
+
+a {
+    color: #333333;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #06c;
+}
+
+.agent_wapper .agent_condition .block .list li.active a {
+    color: #fa4101;
+}
+
+.agent_wapper .agent_condition .block .list+.list {
+    margin-bottom: 8px;
+    background: #eeeeee;
+}
+
+.agent_wapper .agent_condition .block .list {
+    overflow: hidden;
+    padding: 6px 10px 2px;
+}
+
+.agent_wapper .agent_content {
+    overflow: hidden;
+}
+
+.agent_wapper .agent_content .agent_left {
+    float: left;
+    width: 930px;
+}
+
+.agent_wapper .agent_content .agent_left .title {
+    padding: 40px 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.agent_wapper .agent_content .agent_left .title span {
+    color: #f61c06;
+}
+
+ul,
+ol,
+dl {
+    list-style-type: none;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item {
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item img {
+    float: left;
+    width: 160px;
+    height: 160px;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc {
+    position: relative;
+    margin-left: 20px;
+    float: left;
+    width: 750px;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .subtitle {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .subtitle .icon {
+    font-size: 12px;
+    color: #fd2003;
+    border: 1px solid #fd2003;
+    border-radius: 3px;
+    padding: 0 2px;
+    line-height: 12px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.subtitle a {
+    font-size: 16px;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .level .icon {
+    color: #fed018;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xingxing:before {
+    content: "\e600";
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .info {
+    font-size: 12px;
+    color: #666666;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .area {
+    font-size: 12px;
+    color: #666666;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .area span {
+    font-size: 12px;
+    padding-right: 3px;
+    margin-right: 8px;
+    border-right: 1px solid #dddddd;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .tabs {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .tabs span {
+    float: left;
+    color: #80c269;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 1px 3px;
+    margin-right: 8px;
+    line-height: 16px;
+    border: 1px solid #80c269;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .link {
+    position: absolute;
+    right: 7px;
+    bottom: 0px;
+    color: #f39800;
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #f39800;
+}
+
+.text-c {
+    text-align: center;
+}
+
+.pagination {
+    font-size: 80%;
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination .current {
+    background: #f8b551;
+    color: #fff;
+}
+
+.pagination span {
+    color: #5b7648;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 6px;
+    background: #FFFFFF;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 6px;
+    background: #FFFFFF;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333333;
+    box-shadow: 0 0 3px #CCCCCC;
+}
+
+.agent_wapper .agent_content .agent_right {
+    float: right;
+    width: 210px;
+    margin-top: 65px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people {
+    margin-top: 20px;
+    border: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people .title {
+    color: #333333;
+    font-size: 12px;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li {
+    overflow: hidden;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc {
+    float: left;
+    width: 130px;
+    margin-left: 8px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc .subtitle {
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc .subtitle a {
+    font-size: 14px;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc .subtitle a:hover {
+    color: #fcb63d;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc .subtitle .icon {
+    font-size: 12px;
+    color: #fd2003;
+    font-style: normal;
+    padding: 0 3px;
+    border: 1px solid #fd2003;
+}
+
+.agent_wapper .agent_content .agent_right .agent_people li .dsc .time {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #666666;
+    font-size: 12px;
+}
+
+.agent_wapper .agent_content .agent_left .list_wapper .item .dsc .level .icon {
+    color: #fed018;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xingxing:before {
+    content: "\e600";
+}
+
+#home {
+    position: relative;
+    width: 300px;
+    float: left;
+}
+
+.lgog {
+    width: 142px;
+    height: 142px;
+    float: left;
+    margin-right: 50px;
+}
+
+.lgog img {
+    width: 142px;
+    height: 127px;
+}
+
+.lgog p {
+    text-align: center;
+    font-size: 26px;
+}
+
+.download {
+    position: fixed;
+    top: 40px;
+    background: #4169E1;
+    text-align: center;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.download img {
+    width: 130px;
+    height: 130px;
+}
+
+.down {
+    width: 385px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid black;
+    margin-top: 25px;
+    font-size: 17px;
+    line-height: 45px;
+}
+
+.cname {
+    color: red;
+}
+
+#lo img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+    float: left;
+}
+
+.ewm {
+    width: 170px;
+    height: 190px;
+    position: fixed;
+    right: 10px;
+    top: 470px;
+    background: #fff;
+    box-shadow: 2px 2px 9px 0px #c5c5c5;
+}
+
+.ewm img {
+    width: 170px;
+    height: 170px;
+}
+
+.ewm p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.xs {
+    width: 20px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-right: 0;
+    position: relative;
+    top: -120px;
+    right: 95px;
+}
+
+.xs img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    margin-top: 19px;
+}

@@ -1,0 +1,951 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    margin: 0px auto;
+    text-decoration: none;
+}
+
+#header {
+    width: 100%;
+}
+
+.top {
+    height: 33px;
+    background-color: #EEEEEE;
+}
+
+.container {
+    width: 1200px;
+    margin: 0px auto;
+}
+
+.container .left {
+    font-size: 12px;
+    line-height: 33px;
+    color: #333333;
+}
+
+.bottom {
+    border-bottom: 2px solid #f39800;
+}
+
+.top .right {
+    float: right;
+    margin-top: -27px;
+}
+
+.right .login_nav li {
+    float: left;
+    margin-left: 18px;
+}
+
+.login_nav {
+    display: block;
+    list-style-type: none;
+}
+
+.right .login_nav li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.search_wapper a {
+    text-decoration: none;
+    position: relative;
+}
+
+.search_wapper p {
+    position: relative;
+    top: 35px;
+    left: 10px;
+    font-size: 12px;
+    color: #C2C2C2;
+}
+
+#asd {
+    position: relative;
+    left: 0;
+}
+
+.search_wapper h3 {
+    color: #383635;
+    font-size: 22px;
+    position: relative;
+    left: 10px;
+    top: 35px;
+    letter-spacing: 20px;
+}
+
+.search_wapper img {
+    float: left;
+    margin-top: 27px;
+    width: 70px;
+}
+
+.location {
+    float: left;
+    margin: 42px 0px 0px 30px;
+    border: 1px solid #dcdcdc;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.location span {
+    font-size: 12px;
+    line-height: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    color: #333333
+}
+
+.search_box {
+    position: relative;
+    float: right;
+    margin-top: 35px;
+    border: 1px solid #f39800;
+    border-radius: 8px;
+}
+
+.search_box input {
+    width: 415px;
+    height: 40px;
+    border: 0;
+    float: left;
+    border-radius: 8px;
+    text-indent: 30px;
+}
+
+.search_box .search_btn {
+    width: 80px;
+    height: 40px;
+    float: left;
+    background-color: #f39800;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.publish_btn {
+    float: right;
+    color: #f39800;
+    border: 1px solid #f39800;
+    border-radius: 8px;
+    margin-top: 35px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 30px;
+    padding: 0px 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.main_nav {
+    position: absolute;
+    top: 114px;
+    width: 1200px;
+    height: 42px;
+}
+
+.main_nav .tab {
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333333;
+    position: relative;
+    float: left;
+    text-decoration: none;
+}
+
+.main_nav .tab:nth-of-type(2) {
+    background-color: #f8b551;
+    color: #ffffff;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.newpark_dt_wapper .newpark_dt_top {
+    position: relative;
+    margin-top: 20px;
+}
+
+.newpark_dt_wapper .newpark_dt_top .title {
+    font-size: 24px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.newpark_dt_wapper .newpark_dt_top .subtitle {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+.newpark_dt_wapper .newpark_dt_top .code_wapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.newpark_dt_wapper .newpark_dt_top .code_wapper .code_txt {
+    line-height: 19px;
+    font-size: 14px;
+    color: #ec653b;
+    vertical-align: middle;
+}
+
+.newpark_dt_wapper .newpark_dt_nav {
+    margin: 20px 0;
+    overflow: hidden;
+    background: #F6F6F6;
+}
+
+.newpark_dt_wapper .newpark_dt_nav .item.active {
+    border-color: #ec6941;
+    color: #ec6941;
+}
+
+.newpark_dt_wapper .newpark_dt_nav .item {
+    float: left;
+    color: #333333;
+    font-size: 14px;
+    padding: 0 25px;
+    line-height: 50px;
+    border-bottom: 3px solid #F6F6F6;
+    text-decoration: none;
+}
+
+.newpark_dt_wapper .newpark_dt_nav .item {
+    float: left;
+    color: #333333;
+    font-size: 14px;
+    padding: 0 25px;
+    line-height: 50px;
+    border-bottom: 3px solid #F6F6F6;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc {
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .left {
+    float: left;
+}
+
+.gallery-wapper.park-gallery {
+    width: 615px;
+}
+
+.gallery-wapper {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.lSSlideOuter {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.lSSlideWrapper {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.lSSlideOuter .lightSlider,
+.lSSlideOuter .lSPager {
+    padding-left: 0;
+    list-style: none outside none;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right {
+    float: right;
+    width: 560px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline {
+    overflow: hidden;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .price {
+    float: left;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .price b {
+    font-size: 26px;
+    color: #fc0202;
+    font-weight: bold;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .tabs {
+    margin-top: 14px;
+    margin-left: 10px;
+    float: left;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .tabs .tab:nth-child(1) {
+    border-color: #13b5b1;
+    color: #13b5b1;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .tabs .tab {
+    float: left;
+    margin-left: 10px;
+    border: 1px solid;
+    padding: 0 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .tabs .tab:nth-child(2) {
+    border-color: #8fc31f;
+    color: #8fc31f;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .tabs .tab:nth-child(3) {
+    border-color: #f39800;
+    color: #f39800;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline {
+    overflow: hidden;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline {
+    overflow: hidden;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .call {
+    background: #fce7d9;
+    line-height: 44px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .call .phone {
+    padding-left: 20px;
+    font-size: 16px;
+    color: #ed651a;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .call .get {
+    color: #FFFFFF;
+    background: #eb6100;
+    width: 125px;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    top: 0;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .dsc_box {
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline {
+    overflow: hidden;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .half {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+    color: #666666;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .half .subtitle {
+    float: left;
+    width: 70px;
+    color: #333333;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .half .info {
+    float: left;
+    width: 160px;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .full {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #666666;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .full .subtitle {
+    float: left;
+    width: 70px;
+    color: #333333;
+}
+
+.newpark_dt_wapper .newpark_dt_dsc .right .singleline .full .info {
+    float: left;
+    width: 480px;
+}
+
+.newpark_dt_wapper .newpark_dt_title {
+    line-height: 40px;
+    color: #333333;
+    font-size: 16px;
+    background: #faf9f9;
+    padding: 0 20px;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+.newpark_dt_wapper .newpark_dt_info {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.newpark_dt_wapper .newpark_dt_info .dsc {
+    line-height: 24px;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 0;
+}
+
+.newpark_dt_wapper .newpark_dt_info p {
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list {
+    margin-bottom: -31px;
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item {
+    float: left;
+    width: 50%;
+    padding: 0 0 20px;
+    border-bottom: 1px dashed #eeeeee;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .img_box {
+    float: left;
+    width: 204px;
+    height: 150px;
+    position: relative;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_box {
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .img_box .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    padding: 3px 5px;
+    background: #666666;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .img_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .info {
+    float: left;
+    width: 350px;
+    margin-left: 20px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .info .title {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_txt_list .item .info .dsc {
+    font-size: 14px;
+    color: #666666;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special {
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left {
+    position: relative;
+    float: left;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left img {
+    width: 615px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left .drag.type3 {
+    background: #3c8dbc;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left .drag {
+    cursor: pointer;
+    background: #f00;
+    color: #FFFFFF;
+    padding: 0 10px;
+    line-height: 25px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left .drag.type3:before {
+    border-color: transparent #3c8dbc;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .left .drag:before {
+    border-width: 0 0 10px 10px;
+    border-style: solid;
+    border-color: transparent #f00;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 5px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right {
+    float: left;
+    margin-left: 30px;
+    width: 515px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .item {
+    display: none;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .title span {
+    display: inline-block;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .title .tab.type3 {
+    font-size: 12px;
+    color: #ffffff;
+    padding: 0 7px;
+    font-weight: normal;
+    background: #3c8dbc;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .area {
+    margin: 10px 0;
+    color: #333333;
+    font-size: 14px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .info {
+    font-size: 14px;
+    color: #666666;
+    line-height: 24px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_dt_special .right .item.active {
+    display: block;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper {
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_dt_map {
+    width: 800px;
+    height: 400px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    background-color: rgb(243, 241, 236);
+    color: rgb(0, 0, 0);
+    text-align: left;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info {
+    float: right;
+    border: 1px solid #EEEEEE;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .tabs {
+    overflow: hidden;
+    width: 320px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .tabs .item.active {
+    background: #FFFFFF;
+    border-color: #ec6941;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .tabs .item {
+    float: left;
+    width: 80px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 12px;
+    text-align: center;
+    background: #eeeeee;
+    cursor: pointer;
+    border-top: 2px solid #eeeeee;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .tabs .item {
+    float: left;
+    width: 80px;
+    line-height: 34px;
+    color: #333333;
+    font-size: 12px;
+    text-align: center;
+    background: #eeeeee;
+    cursor: pointer;
+    border-top: 2px solid #eeeeee;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points {
+    width: 320px;
+    height: 362px;
+    overflow-y: auto;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item {
+    padding: 10px 0;
+    list-style: none;
+    padding-left: 30px;
+    cursor: pointer;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item .title {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item span {
+    line-height: 20px;
+    display: block;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item .code {
+    background: red;
+    color: #FFFFFF;
+    font-size: 12px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-style: normal;
+    line-height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item .phone {
+    font-size: 12px;
+    padding-left: 26px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .newpark_map_wapper .newpark_map_info .newpark_points .item span {
+    line-height: 20px;
+    display: block;
+}
+
+.area-adver {
+    position: relative;
+    background: #FFFFFF;
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.area-adver h5 {
+    margin: 0;
+    padding-left: 10px;
+    border-left: 3px solid #f39800;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+.area-adver li {
+    width: 180px;
+    float: left;
+    margin: 15px 0 0 15px;
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+}
+
+.area-adver li .img-box {
+    position: relative;
+}
+
+.area-adver li .img-box img {
+    width: 100%;
+    height: 130px;
+    display: block;
+}
+
+.area-adver li .img-box span {
+    position: absolute;
+    width: 160px;
+    padding: 10px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: inline-block;
+    left: 0;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+.area-adver li .dsc {
+    border: 1px solid #e5e5e5;
+    display: block;
+    height: 72px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    color: #333333;
+}
+
+.area-adver li .dsc .price {
+    margin-bottom: 5px;
+    padding: 5px 10px 0;
+}
+
+.area-adver li .dsc .price span {
+    color: #eb6100;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.area-adver li .dsc p {
+    padding: 0 10px;
+    margin-bottom: 0;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list {
+    margin-left: -20px;
+    margin-bottom: -16px;
+    margin-top: -16px;
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item {
+    float: left;
+    width: 48%;
+    margin-left: 20px;
+    padding: 20px 0;
+    border-bottom: 1px dashed #eeeeee;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .img_box {
+    float: left;
+    width: 130px;
+    height: 86px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .img_box {
+    overflow: hidden;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .img_box img {
+    width: 100%;
+    height: 100%;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info {
+    float: left;
+    width: 410px;
+    margin-left: 20px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .title {
+    font-size: 14px;
+    color: #333333;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .dsc {
+    margin: 6px 0;
+    height: 36px;
+    overflow: hidden;
+    line-height: 18px;
+    font-size: 12px;
+    position: relative;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .time {
+    color: #8a8a8a;
+    font-size: 12px;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .dsc a {
+    color: #333333;
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .dsc a:hover {
+    color: rgb(88, 88, 245);
+}
+
+.newpark_dt_wapper .newpark_dt_info .list .item .info .dsc .link:hover {
+    color: #f8b551;
+}
+
+#home {
+    position: relative;
+    float: left;
+    width: 300px;
+}
+
+#xc img {
+    width: 224px;
+    height: 180px;
+    margin-right: 10px;
+}
+
+.parkAddress {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lgog {
+    width: 142px;
+    height: 142px;
+    float: left;
+    margin-right: 50px;
+}
+
+.lgog img {
+    width: 142px;
+    height: 127px;
+}
+
+.lgog p {
+    text-align: center;
+    font-size: 26px;
+}
+
+.download {
+    position: fixed;
+    top: 40px;
+    background: #4169E1;
+    text-align: center;
+    z-index: 1000;
+    padding: 5px;
+}
+
+.download img {
+    width: 130px;
+    height: 130px;
+}
+
+.down {
+    width: 385px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid black;
+    margin-top: 25px;
+    font-size: 17px;
+    line-height: 45px;
+}
+
+#lo img {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+    float: left;
+}
+
+.ewm {
+    width: 170px;
+    height: 190px;
+    position: fixed;
+    right: 10px;
+    top: 470px;
+    background: #fff;
+    box-shadow: 2px 2px 9px 0px #c5c5c5;
+}
+
+.ewm img {
+    width: 170px;
+    height: 170px;
+}
+
+.ewm p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.xs {
+    width: 20px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-right: 0;
+    position: relative;
+    top: -120px;
+    right: 95px;
+}
+
+.xs img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    margin-top: 19px;
+}

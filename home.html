@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <title>库房滴滴</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="./js/phone.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/jquery-1.4.4.min.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src=".js/phone.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            color: #8a8a8a;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="header" class="[header_class]">
+        <div class="header_wapper">
+            <div class="top">
+                <div class="container clearfix">
+                    <div class="left">
+                        专注厂房出租出售、仓库出租、工业土地转让出售、园区招商的O2O工业地产交易服务平台
+                    </div>
+                    <div class="right">
+                        <ul class="login_nav">
+                            <li style="color:#ef5636">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-shouji" style="color:red"></use>
+                                </svg>
+                                <a href="javascript:;" id="show" onmouseover="shouEr()" onmouseout="hideEr()" style="color:#ef5636">下载库房滴滴APP</a>
+                                <div class="download" id="down" onclick="hidetext()" style="display: none">
+                                    <img src="./img/1556788963.png">
+                                </div>
+
+                            </li>
+
+                            <script type="text/javascript">
+                                function shouEr() {
+                                    document.getElementById("down").style.display = "block";
+                                }
+
+                                function hideEr() {
+                                    document.getElementById("down").style.display = "none";
+                                }
+                            </script>
+
+                            <li>
+                                <a href="./login.html" id="lo">登录</a>
+                            </li>
+                            <li>
+                                <a href="zhuce.html" id="zh" onclick="qingchu()">注册</a>
+                            </li>
+                            <!--<li>
+                                <a href="javascript:;" target="_blank">帮助</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">推广</a>
+                            </li>
+                            <li>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weibo"></use>
+                                </svg>
+                                <a href="javascript:;" title="安通厂房网新浪微博" target='_blank'>新浪微博</a>
+                            </li>-->
+                            <li>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weixin"></use>
+                                </svg>
+                                <span class="has_down">
+                                    <a href="javascript:;" onMouseOut="hideImg()"
+                                        onmouseover="showImg()">微信</a>
+                                    <div id="wxImg"
+                                        style="display:none;height:50px;background:#f00;position:absolute; z-index: 999; margin-top: 15px;margin-left: -150px;border: 1px solid #dcdcdc">
+                                        <img src="./img/weixinimg.jpg" width="250px" height="340px">
+                                    </div>
+
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                function showImg() {
+                    document.getElementById("wxImg").style.display = 'block';
+                }
+
+                function hideImg() {
+                    document.getElementById("wxImg").style.display = 'none';
+                }
+            </script>
+            <div class="bottom" style="height:152px;">
+                <div class="container clearfix" style="height: 100%;">
+                    <div class="search_wapper clearfix">
+                        <img class="logo" src="./img/logo1.png" class="logo">
+                        <h3>库房滴滴</h3>
+                        <p>O2O工业地产交易服务平台</p>
+                        <a class="location" href="allcity.html">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-dizhi"></use>
+                            </svg>
+                            <span>
+                                <div id="map">
+                                        <img src="./img/dizhi.png" id="dizhima">
+                                    {{city}}
+                                </div>
+                            </span>
+                        </a>
+                        <a class="publish_btn" id="asd" href="mainIndex.html" target="_blank">
+                            免费发布信息
+                        </a>
+                        <div class="search_box clearfix">
+                            <input type="text" class="search-text" placeholder="请输入关键词查找，如杭州 单层厂房出租" id="bdcsMain" onkeypress="CheckInfo()" />
+                            <button type="button" class="search_btn" onclick="goSearch()" id="sou">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-sousuo" style="background-color:white"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main_nav">
+                        <a href="#" class="tab avtive">网站首页</a>
+                        <a href="yuanqu.html" class="tab">园区招商</a>
+                        <a href="changfang.html" class="tab">厂房</a>
+                        <a href="cangku.html" class="tab">仓库</a>
+                        <a href="tudi.html" class="tab">土地</a>
+                        <a href="qiuzuqiugou.html" class="tab">求租求购</a>
+                        <a href="agent.html" class="tab">经纪人
+                            <img src="./img/hot.gif" class="tag">
+                        </a>
+                        <a href="information.html" class="tab">地产资讯</a>
+                        <a href="dichan.html" class="tab">地产百科</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div class="slider" id="slider">
+                <div class="slider-inner">
+                    <div class="item">
+                        <img class="img" src="./img/lunbo.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="img" src="./img/lunbo.jpg">
+                    </div>
+                    <div class="item">
+                        <img class="img" src="./img/lunbo.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="app">
+        <!-- <div class="contain">
+            <div class="container">
+                <div class="com_title_wapper">
+                    <span class="titl">园区招商
+                        <img src="./img/title1.png" id="title1">
+                    </span>
+                    <p class="tipss">产业群集 聚您所需</p>
+                </div>
+                <div class="list" style="text-align:center">
+                    <ul>
+                        <li v-for="item in yuanqu_list" class="asdd">
+                            <a v-bind:href="'yuanqu1.html?pid='+item.pid">
+                                <img :src="'http://39.106.78.98/'+item.titlePicture" class="immg1">
+                                <div class="dsc1">
+                                    <h5>{{item.title}}</h5>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
+        <div class="new_index_com_lists">
+            <div class="espn">
+
+                <div class="container">
+                    <!-- <div class="new_index_full_adver mt-10">
+                        <a href="#">
+                            <img src="./img/800_600 (2).png" width="1200px" height="80px">
+                        </a>
+                    </div> -->
+                    <div class="new_index_title">
+
+                        <div class="left">
+                            <span class="active" data-id="cfcz_swiper" onclick="toggleTabs(this)">
+                                厂房出租
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="com_lists_waper" id="gary">
+                <div class="lists_waper_all">
+                    <a v-bind:href="'changfang1.html?productId='+item.productId" v-for="item in changfang_list">
+                        <div class="lists_waper_all-1">
+                            <img :src="item.titlePicture" width="215px" height="160px">
+                            <div class="aaa">
+                                <h2>{{item.title}}</h2>
+                            </div>
+                            <p><span>￥{{item.rent}}</span>{{item.rentUnit}}</p>
+                            <p><img src="./img/dizhi.png">{{item.region}}</p>
+                            <p><img src="./img/mianji.png">{{item.area}}{{item.areaUnit}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="new_index_com_lists" id="two">
+            <div class="container">
+                <!-- <div class="new_index_full_adver mt-10">
+                    <a href="#">
+                        <img src="./img/800_600 (3).png" width="1200px" height="80px">
+                    </a>
+                </div> -->
+                <div class="new_index_title">
+
+                    <div class="left">
+                        <span class="active" data-id="cfcz_swiper" onclick="toggleTabs(this)">
+                            仓库出租
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="com_lists_waper">
+                <div class="lists_waper_all">
+                    <a v-bind:href="'cangku1.html?productId='+item.productId" v-for="item in cangku_list">
+                        <div class="lists_waper_all-1">
+                            <img :src="item.titlePicture" width="215px" height="160px">
+                            <div class="aaa">
+                                <h2>{{item.title}}</h2>
+                            </div>
+                            <p><span>￥{{item.rent}}</span>{{item.rentUnit}}</p>
+                            <p><img src="./img/dizhi.png">{{item.region}}</p>
+                            <p><img src="./img/mianji.png">{{item.area}}{{item.areaUnit}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="new_index_com_lists" id="tudi">
+            <div class="espn">
+
+                <div class="container">
+                    <div class="new_index_full_adver mt-10">
+                        <!-- <a href="#">
+                            <img src="./img/800_600 (4).png" width="1200px" height="80px">
+                        </a> -->
+                    </div>
+                    <div class="new_index_title">
+
+                        <div class="left">
+                            <span class="active" data-id="cfcz_swiper" onclick="toggleTabs(this)">
+                                土地出租
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="com_lists_waper" id="gary">
+                <div class="lists_waper_all">
+                    <a v-bind:href="'tudi1.html?productId='+item.productId" v-for="item in tudi_list">
+                        <div class="lists_waper_all-1">
+                            <img :src="item.titlePicture" width="215px" height="160px">
+                            <div class="aaa">
+                                <h2>{{item.title}}</h2>
+                            </div>
+                            <p><span>￥{{item.rent}}</span>{{item.rentUnit}}</p>
+                            <p><img src="./img/dizhi.png">{{item.region}}</p>
+                            <p><img src="./img/mianji.png">{{item.area}}{{item.areaUnit}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="index_news">
+            <div class="container">
+                <div class="com_title_wapper">
+                    <sapn class="titleq">
+                        地产资讯
+                    </sapn>
+                    <img src="./img/title2 (1).png" id="title2">
+                    <p class="tips">行业动态 招商攻略</p>
+                </div>
+                <div class="box">
+                    <div class="left">
+                        <div class="img_box">
+                            <a href="agent.html">
+                                <img src="./img/800_600.jpg">
+                            </a>
+                            <p>
+                                <span>地产经纪VIP会员</span>
+                            </p>
+                        </div>
+                        <div class="img_box1">
+                            <a href="show-114.html">
+                                <img src="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div class="subtitle">
+                            头条资讯
+                            <a href="information.html">更多></a>
+                        </div>
+                        <ul>
+                            <li v-for="item in toutiao_list">
+                                <span>【头条资讯】</span>
+                                <a v-bind:href="'information1.html?nid='+item.nid">{{item.title}}</a>
+                                <i>{{item.createTime}}</i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div class="subtitle">
+                            地产百科
+                            <a href="dichan.html">更多></a>
+                        </div>
+                        <div class="item" v-for="item in baike_list">
+                            <h5 class="titl">
+                                <span class="active">已解决</span>
+                                <a v-bind:href="'dichan1.html?elid='+item.elid">{{item.title}}</a>
+                            </h5>
+                            <p>{{item.content}}</p>
+                            <div class="tips clearfix">
+                                <span>{{item.createTime}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new_index_toolss">
+        <div class="container">
+            <div class="com_title_waper">
+                <span class="titl">
+                    合作伙伴
+                    <img src="./img/title2.png" id="title3">
+                </span>
+                <p class="com_title_waper2">大品牌给您足够的信赖</p>
+            </div>
+            <div class="com-title-img">
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/hulingroup.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/zhongnangaoke.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/huaxia.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/xeda.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-2">
+                    <a href="#">
+                        <img src="./img/chongfu.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/vailog.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/liandong.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/jinzhou.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-1">
+                    <a href="#">
+                        <img src="./img/weifang.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+                <div class="com-title-img-2">
+                    <a href="#">
+                        <img src="./img/last.jpg" width="224px" height="80px">
+                    </a>
+                </div>
+            </div>
+            <div class="com_one_font">
+                <div class="com_one_font_zi-1">
+                    <span class="active" data-id="cfcz_swiper" onclick="toggleTabs(this)">
+                        友情链接
+                    </span>
+                </div>
+                <div class="right">
+                    <span>申请链接 QQ：2641177372</span>
+                </div>
+            </div>
+            <div class="friend_box toggle">
+                <a href="#">杭州厂房出租</a>
+                <a href="#">昆明装修网</a>
+                <a href="#">厂房出租网</a>
+                <a href="#">网站建设</a>
+                <a href="#">梅州装修</a>
+                <a href="#">莫干山地板加盟</a>
+                <a href="#">尚品本色木门加盟</a>
+                <a href="#">九牧卫浴加盟</a>
+                <a href="#">集成吊顶十大品牌</a>
+                <a href="#">行以致远杭州品牌设计公司</a>
+                <a href="#">华帝橱柜加盟</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="new_footer">
+            <div class="container">
+                <div class="ewm" id="ewm">
+                    <img src="./img/1556788963.png">
+                    <p>下载库房滴滴APP</p>
+                    <div class="xs" onclick="xs()">
+                        <img src="./img/goright (1).png" style="width: 12px;height:12px;" id="xsimg">
+                    </div>
+                </div>
+                <!-- <div class="links_waper">
+
+                    <ul>
+                        <h4>帮助中心</h4>
+                        <li><a href="dichan.html">常见问题</a></li>
+                        <li><a href="#">更多帮助</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">隐私权条款</a></li>
+                    </ul>
+                    <ul>
+                        <h4>关注我们</h4>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">熊掌号</a></li>
+                        <li><a href="#">APP下载</a></li>
+                    </ul>
+                    <ul>
+                        <h4>了解库房</h4>
+                        <li><a href="#">了解库房滴滴</a></li>
+                        <li><a href="#">加入库房滴滴</a></li>
+                    </ul>
+                    <ul>
+                        <h4>会员服务</h4>
+                        <li><a href="#">会员介绍</a></li>
+                        <li><a href="#">推广服务</a></li>
+                        <li><a href="#">开通VIP服务</a></li>
+                    </ul>
+                    <div class="code">
+                        <p class="subtitlea">扫一扫下载app</p>
+                        <img src="./img/1556788963.png">
+                        <p class="tip">库房滴滴APP</p>
+                    </div>
+                </div> -->
+                <div class="copyright_waper">
+                    <p>Copyright © 2019 库房滴滴 浙ICP备14017628号 公安备案：33011002013057 增值电信业务经营许可证：浙B2-20140369</p>
+
+                    <!-- <div class="tabs">
+                        <a href="#"><img src="./img/link1.png"></a>
+                        <a href="#"><img src="./img/link2.png"></a>
+                        <a href="#"><img src="./img/link3.png"></a>
+                        <a href="#"><img src="./img/link4.png"></a>
+                        <a href="#"><img src="./img/link5.png"></a>
+                        <a href="#"><img src="./img/link6.png"></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- <div class="rightfly">
+            <div class="side">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="sidebox"><img src="./img/kefu.png" width="24px" height="24px">在线沟通
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sidebox"><img src="./img/zuoji.png" width="24px" height="24px">400-0571-233
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="sidebox"><img src="./img/qq.png" width="24px" height="24px">2050763492
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="sidebox"><img src="./img/erweima.png" width="24px" height="24px">
+                                <div class="erweima">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="aide">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="sidebox"><img src="./img/gerenzhongxin.png" width="24px" height="24px">个人中心
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="sidebox"><img src="./img/fabuxinxi.png" width="24px" height="24px">发布信息
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="sidebox"><img src="./img/wodeshoucang.png" width="24px" height="24px">我的收藏
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="sidebox"><img src="./img/yijianfankui.png" width="24px" height="24px">意见反馈
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="sidebox" id="btn-top"><img src="./img/top.png" width="24px" height="24px">回到顶部
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div> -->
+        <!-- <div class="fixed_left">
+            <a href="#">
+                <img src="./img/left.png">
+            </a>
+        </div> -->
+    </div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YcOGuCXZOmSuEC3cKfDTbDlI"></script>
+    <script src="./js/core.js"></script>
+    <script>
+        var serverHost = getServerHost(); //获取服务器接口地址
+
+        function goSearch() {
+            var title = $("#bdcsMain").val();
+            $.ajax({
+                url: serverHost + '/fplHouse/queryFplHousePOByTitle',
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    title: title,
+                    token: localStorage.token
+                },
+                async: false,
+                success: function(data) {
+                    window.location = './search.html?title=' + encodeURI(encodeURI(title))
+                },
+                error: function(error) {
+                    alert(2123123);
+                }
+            })
+        }
+        $('body').keydown(function() {
+            if (event.keyCode == 13) {
+                $('#sou').click();
+            };
+        });
+        var app = new Vue({
+            el: '#app',
+            data: {
+                yuanqu_list: [],
+                changfang_list: [],
+                cangku_list: [],
+                tudi_list: [],
+                toutiao_list: [],
+                baike_list: [],
+            },
+
+            // 在 `methods` 对象中定义方法
+            methods: {
+                findDataByHome: function() {
+                    //查询园区列表
+                    /* $.ajax({
+                        url: serverHost + "/parkStore/pageParkStore",
+                        type: "post",
+                        dataType: "json",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        data: {
+                            pageNum: 1,
+                            pageSize: 4,
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.yuanqu_list = data.data.content; //返回的园区列表
+
+                        },
+                        error: function() {
+
+                        }
+                    }); */
+
+                    //查询厂房列表
+                    $.ajax({
+                        url: serverHost + "/fplHouse/pageFplHouse",
+                        type: "post",
+                        dataType: "json",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        data: {
+                            pageNum: 1,
+                            pageSize: 10,
+                            types: 1,
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.changfang_list = data.data.content; //返回的厂房列表
+
+                        },
+                        error: function() {
+
+                        }
+                    });
+
+                    //查询仓库列表
+                    $.ajax({
+                        url: serverHost + "/fplHouse/pageFplHouse",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            pageNum: 1,
+                            pageSize: 10,
+                            types: 2,
+                        },
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.cangku_list = data.data.content; //返回的仓库列表
+
+                        },
+                        error: function() {
+
+                        }
+                    });
+
+                    //查询土地列表
+                    $.ajax({
+                        url: serverHost + "/fplHouse/pageFplHouse",
+                        type: "post",
+                        dataType: "json",
+                        data: {
+                            pageNum: 1,
+                            pageSize: 10,
+                            types: 3,
+                        },
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.tudi_list = data.data.content; //返回的土地列表
+
+                        },
+                        error: function() {
+
+                        }
+                    });
+
+                    //查询新闻列表
+                    $.ajax({
+                        url: serverHost + "/newsController/pageNews",
+                        type: "post",
+                        dataType: "json",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        data: {
+                            pageNum: 1,
+                            pageSize: 14,
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.toutiao_list = data.data.content; //返回的新闻列表
+
+                        },
+                        error: function() {
+
+                        }
+                    });
+
+
+                    //查询百科列表
+                    $.ajax({
+                        url: serverHost + "/encyclopedia/pageEncyclopedia",
+                        type: "post",
+                        dataType: "json",
+                        beforeSend: function(xhr) {
+                            xhr.setRequestHeader("X-Custom-Header1", "Bar");
+                        },
+                        data: {
+                            pageNum: 1,
+                            pageSize: 5,
+                        },
+                        async: false,
+                        success: function(data) {
+
+                            app.baike_list = data.data.content; //返回的百科列表
+                        },
+                        error: function() {
+
+                        }
+                    });
+                }
+
+            }
+        })
+
+        //打开页面就会自动执行下面方法
+        app.findDataByHome(); //从服务器获取首页信息的接口方法
+        browserRedirect(); 
+    </script>
+    <script type="text/javascript">
+        //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return decodeURI(r[2]);
+            return null; //返回参数值
+        }
+
+        //接收URL中的参数booksId
+        var city = getUrlParam('city');
+        localStorage.setItem("name", city);
+
+        if (city == null) {
+            function myFun(result) {
+                var cityName = result.name;
+
+                localStorage.setItem("city", cityName);
+                //map.setCenter(cityName);
+                new Vue({
+                    el: '#map',
+                    data: {
+                        city: cityName,
+                    }
+                })
+            }
+        } else {
+            function myFun(result) {
+                var cityName = result.name;
+                //map.setCenter(cityName);
+
+                new Vue({
+                    el: '#map',
+                    data: {
+                        city: localStorage.getItem("name")
+                    }
+                })
+            }
+        }
+        var myCity = new BMap.LocalCity();
+        myCity.get(myFun);
+    </script>
+</body>
+
+</html>
+
+<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+<script>
+    /**
+     * Author         : CheneyLiu
+     * Date           : date
+     * isAuto:        true, 自动播放
+     * transTime:     3000, 自动播放间隔
+     * animateSpeed:  1000,  动画速度
+     * sliderMode:    'slide', 类型//'slide | fade',
+     * pointerControl: true, 指示器开关
+     * pointerEvent:  'click', 指示器类型//'hover' | 'click',
+     * arrowControl:  true, 左右控制
+     */
+    ;
+    (function($) {
+        $.fn.Slider = function(options) {
+            "use strict";
+
+            var settings = $.extend({
+                isAuto: true,
+                transTime: 4000,
+                animateSpeed: 1000,
+                sliderMode: 'fade', //'slide | fade',hi
+                pointerControl: true,
+                pointerEvent: 'click', //'hover' | 'click',
+                arrowControl: true,
+            }, options);
+            var interval;
+            var isAnimating = false;
+            var $slider = $(this);
+            var $sliderWrap = $slider.find('.slider-inner');
+            var sliderCount = $sliderWrap.find('> .item').length;
+            var sliderWidth = $slider.width();
+            var currentIndex = 0;
+
+            var sliderFun = {
+                controlInit: function() {
+                    // pointerControl
+                    if (settings.pointerControl) {
+
+                        var html = '';
+                        html += '<ol class="slider-pointer">';
+                        for (var i = 0; i < sliderCount; i++) {
+                            if (i == 0) {
+                                html += '<li class="active"></li>'
+                            } else {
+                                html += '<li></li>'
+                            }
+                        }
+                        html += '</ol>'
+                        $slider.append(html);
+                        // 指示器居中
+                        var $pointer = $slider.find('.slider-pointer');
+                        $pointer.css({
+                            left: '50%',
+                            marginLeft: -$pointer.width() / 2
+                        });
+                    }
+
+                },
+                // slider
+                sliderInit: function() {
+                    sliderFun.controlInit();
+                    // 模式选择
+                    if (settings.sliderMode == 'slide') {
+                        // slide 模式
+                        $sliderWrap.width(sliderWidth * sliderCount);
+                        $sliderWrap.children().width(sliderWidth);
+                    } else {
+                        // mode 模式
+                        $sliderWrap.children().css({
+                            'position': 'absolute',
+                            'left': 0,
+                            'top': 0
+                        });
+                        $sliderWrap.children().first().siblings().hide();
+                    }
+                    // 控制事件
+                    if (settings.pointerEvent == 'hover') {
+                        $slider.find('.slider-pointer > li').mouseenter(function(event) {
+                            sliderFun.sliderPlay($(this).index());
+                        });
+                    } else {
+                        $slider.find('.slider-pointer > li').click(function(event) {
+                            if (currentIndex != $(this).index()) {
+                                sliderFun.sliderPlay($(this).index())
+                            }
+                        });
+                    }
+                    // 自动播放
+                    sliderFun.autoPlay();
+                },
+                // slidePlay
+                sliderPlay: function(index) {
+                    sliderFun.stop();
+                    isAnimating = true;
+                    $sliderWrap.children().first().stop(true, true);
+                    $sliderWrap.children().stop(true, true);
+                    $slider.find('.slider-pointer').children()
+                        .eq(index).addClass('active')
+                        .siblings().removeClass('active');
+                    if (settings.sliderMode == "slide") {
+                        // slide
+                        if (index > currentIndex) {
+                            $sliderWrap.animate({
+                                left: '-=' + Math.abs(index - currentIndex) * sliderWidth + 'px'
+                            }, settings.animateSpeed, function() {
+                                sliderFun.stop();
+                                isAnimating = false;
+                                sliderFun.autoPlay()
+                            });
+                        } else if (index < currentIndex) {
+                            $sliderWrap.animate({
+                                left: '+=' + Math.abs(index - currentIndex) * sliderWidth + 'px'
+                            }, settings.animateSpeed, function() {
+                                isAnimating = false;
+                                sliderFun.autoPlay();
+                            });
+                        } else {
+                            return;
+                        }
+                    } else {
+                        // fade
+                        if ($sliderWrap.children(':visible').index() == index) return;
+                        $sliderWrap.children().fadeOut(settings.animateSpeed)
+                            .eq(index).fadeIn(settings.animateSpeed, function() {
+                                isAnimating = false;
+                                sliderFun.autoPlay();
+                            });
+                    }
+                    currentIndex = index;
+                },
+                // toggleSlide
+                toggleSlide: function(arrow) {
+                    if (isAnimating) {
+                        return;
+                    }
+                    var index;
+                    if (arrow == 'prev') {
+                        index = (currentIndex == 0) ? sliderCount - 1 : currentIndex - 1;
+                        sliderFun.sliderPlay(index);
+                    } else if (arrow == 'next') {
+                        index = (currentIndex == sliderCount - 1) ? 0 : currentIndex + 1;
+                        sliderFun.sliderPlay(index);
+                    }
+                },
+                // autoPlay
+                autoPlay: function() {
+                    if (settings.isAuto) {
+                        interval = setInterval(function() {
+                            var index = currentIndex;
+                            (currentIndex == sliderCount - 1) ? index = 0: index = currentIndex + 1;
+                            sliderFun.sliderPlay(index);
+                        }, settings.transTime);
+                    } else {
+                        return;
+                    }
+                },
+                //stop
+                stop: function() {
+                    clearInterval(interval);
+                },
+            };
+            sliderFun.sliderInit();
+        }
+    })(jQuery);
+    jQuery(document).ready(function($) {
+        $('#slider').Slider();
+    });
+</script>
+<script>
+    if (localStorage.getItem('login') == null) {
+        var obj = document.getElementById('lo');
+        obj.href = "./login.html";
+        obj.innerText = "登录";
+        var obja = document.getElementById('zh');
+        obja.href = "./zhuce.html";
+        obja.innerText = "注册";
+        var ob = document.getElementById('asd');
+        ob.href = './login.html';
+    } else {
+        var obj = document.getElementById('lo');
+        obj.href = "./mainIndex.html";
+        obj.innerText = localStorage.getItem('login');
+        var img = document.createElement('img'); //创建一个标签
+        img.setAttribute('src', './img/yonghu.png'); //给标签定义src链接
+        document.getElementById('lo').appendChild(img); //放到指定的id里
+        obj.style.color = '#f39800';
+        var obja = document.getElementById('zh');
+        obja.href = "javascript:;";
+        obja.innerText = "退出";
+        var ob = document.getElementById('asd');
+        ob.href = './mainIndex.html';
+
+        function qingchu() {
+            localStorage.clear();
+        }
+    }
+</script>
+<script>
+    var flag = true;
+
+    function xs() {
+        var img = document.getElementById("xsimg");
+        var box = document.getElementById('ewm');
+        if (flag) {
+            img.src = "./img/goright (2).png";
+            box.style.cssText = 'transform: translateX(180px);transition: all 0.5s ease-in-out 0s;'
+            flag = false;
+        } else {
+            img.src = "./img/goright (1).png";
+            box.style.cssText = 'transform: translateX(0);transition: all 0.5s ease-in-out 0s;'
+            flag = true;
+        }
+    }
+</script>

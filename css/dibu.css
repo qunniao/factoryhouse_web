@@ -1,0 +1,105 @@
+#footer {
+    clear: both;
+}
+
+.sd {
+    margin-top: -135px;
+}
+
+.new_footer {
+    border-top: 1px solid #d2d2d2;
+    background: #eeeeee;
+}
+
+.new_footer .container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.new_footer .container .links_wapper {
+    padding: 45px 0 20px;
+    overflow: hidden;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.new_footer .links_wapper .logo {
+    float: left;
+    margin-right: 100px;
+}
+
+.new_footer .links_wapper .lists {
+    float: left;
+    width: 120px;
+    margin-right: 60px;
+    margin-left: 50px;
+}
+
+.new_footer .links_wapper .lists h4 {
+    font-size: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.new_footer .links_wapper .lists li {
+    list-style: none;
+}
+
+.new_footer .links_wapper .lists li a {
+    line-height: 24px;
+    color: #8a8a8a;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.new_footer .links_wapper .lists li a:hover {
+    color: #f39800;
+}
+
+.new_footer .links_wapper .code {
+    float: left;
+    width: 235px;
+    text-align: center;
+    border-left: 1px solid #d2d2d2;
+}
+
+.new_footer .links_wapper .code .subtitle {
+    font-size: 16px;
+}
+
+.new_footer .links_wapper .code img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.new_footer .links_wapper .code .tip {
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.new_footer .copyright_wapper {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.new_footer .copyright_wapper .copyright {
+    font-size: 12px;
+}
+
+.new_footer .copyright_wapper .law {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.new_footer .copyright_wapper .tabs {
+    margin-top: 20px;
+}
+
+.new_footer .copyright_wapper .tabs a {
+    display: inline-block;
+    margin: 0 10px;
+}

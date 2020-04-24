@@ -1,0 +1,284 @@
+.bg-interval {
+    background: #f8f8f8;
+}
+
+.xs-banner {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.xs-banner .banner {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 350px;
+    z-index: -1;
+}
+
+.xs-banner h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 50px;
+    color: #5e3936;
+}
+
+.xs-banner .beat {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    color: #eee;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.xs-banner .beat b {
+    font-size: 40px;
+    vertical-align: sub;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+.xs-wapper {
+    position: relative;
+}
+
+.xs-fly {
+    position: fixed;
+    left: 50%;
+    z-index: 999;
+    top: 400px;
+    margin-left: -700px;
+    font-size: 12px;
+    text-align: left;
+    width: 80px;
+}
+
+.xs-fly {
+    position: fixed;
+    left: 50%;
+    z-index: 999;
+    top: 400px;
+    margin-left: -700px;
+    font-size: 12px;
+    text-align: left;
+    width: 80px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.xs-fly li {
+    margin-bottom: 15px;
+    margin-left: -30px;
+}
+
+.xs-fly li:nth-child(1) a:hover,
+.xs-fly li:nth-child(1).active a {
+    background: #d43d4e;
+}
+
+.xs-fly li:nth-child(2) a:hover,
+.xs-fly li:nth-child(2).active a {
+    background: #c2782f;
+}
+
+.xs-fly li:nth-child(3) a:hover,
+.xs-fly li:nth-child(3).active a {
+    background: #296693;
+}
+
+.xs-fly li:nth-child(4) a:hover,
+.xs-fly li:nth-child(4).active a {
+    background: #6c9d0e;
+}
+
+.xs-fly li:nth-child(5) a:hover,
+.xs-fly li:nth-child(5).active a {
+    background: #fe7a65;
+}
+
+.xs-fly a {
+    background: #aaa;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.xs-fly span {
+    display: inline-block;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+}
+
+.xs-fold {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.xs-wapper .xs-list-title {
+    color: #6e553b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.xs-wapper .xs-list-title {
+    color: #6e553b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.xs-fold .dsc {
+    line-height: 200%;
+    font-size: 14px;
+    text-indent: 2em;
+}
+
+.mr-20 {
+    margin-right: 20px;
+    float: left;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.xs-fold #echarts {
+    width: 600px;
+    height: 300px;
+    float: right;
+}
+
+.xs-wapper-box {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #ddd;
+    padding-bottom: 10px;
+}
+
+.xs-wapper .xs-list {
+    margin-left: -50px;
+}
+
+.xs-wapper .xs-item {
+    border: 1px solid #fff;
+    width: 280px;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 11px;
+}
+
+.xs-wapper .xs-item .icon-youzhi {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 30px;
+}
+
+.xs-wapper .xs-item a img {
+    width: 100%;
+    height: 180px;
+}
+
+.xs-wapper .xs-item .dsc {
+    border: solid #ededed;
+    border-width: 0 1px 1px 1px;
+    padding: 10px;
+}
+
+.xs-wapper .xs-item .dsc h5 {
+    margin: 0 0 10px;
+    overflow: hidden;
+    height: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.xs-wapper .xs-item .dsc h5 a {
+    color: #333333;
+    font-weight: normal;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+.xs-wapper .xs-item .dsc .inline {
+    color: #888;
+    line-height: 22px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.xs-wapper .xs-item .dsc .left {
+    font-size: 12px;
+    float: left;
+}
+
+.xs-wapper .xs-item .dsc .left b {
+    font-size: 14px;
+    color: #ff5722;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+.xs-wapper .xs-item .dsc .right {
+    font-size: 12px;
+    float: right;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.xs-wapper .xs-item .dsc .left.tag {
+    color: #4caf50;
+    margin-right: 5px;
+    padding: 0 5px;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+}
+
+.xs-wapper .xs-item .dsc .left {
+    float: left;
+}

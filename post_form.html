@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>会员中心-库房滴滴</title>
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <link rel="stylesheet" type="text/css" href="./css/post_form.css" />
+    <script src="./js/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="./js/iconfont111.js"></script>
+    <script src="./js/iconfont1111.js"></script>
+    <script src="./js/iconfont122.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/distpicker.data.js"></script>
+    <script src="./js/distpicker.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-interval">
+    <div id="all_wapper" style="width: 100%;">
+        <div id="header" class="[header_class]">
+            <div class="header_wapper">
+                <div class="top">
+                    <div class="container clearfix">
+                        <div class="left">
+                            专注厂房出租出售、仓库出租、工业土地转让出售、园区招商的O2O工业地产交易服务平台
+                        </div>
+                        <div class="right">
+                            <ul class="login_nav">
+                                <li>
+                                    <a href="mainIndex.html" title="点击进入会员中心" class="active">
+                                        <img src="./img/yonghu.png" style="width: 15px;height:15px;position:relative;top:3px;">{{phone}}</a>
+                                    &nbsp;
+                                    <a href="javascript:;" onclick="qingchu()">
+                                        退出
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="has_down">
+                                        <a href="javascript:;" onMouseOut="hideImg()" onmouseover="showImg()">
+                                            <svg class="icon" aria-hidden="true"
+                                                style="width: 17px;height:17px;position:relative;left:-3px;">
+                                                <use xlink:href="#icon-weixin"></use>
+                                            </svg>微信
+                                        </a>
+                                        <div id="wxImg"
+                                            style="display:none;height:50px;background:#f00;position:absolute; z-index: 999; margin-top: 15px;margin-left: -150px;border: 1px solid #dcdcdc">
+                                            <img src="./img/weixinimg.jpg" width="250px" height="340px">
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom other">
+                    <div class="container clearfix">
+                        <a href="./home.html">
+                            <img src="./img/logo1.png" class="titleimg">
+                            <div class="title" style="margin-left: 5px;">
+                                <p class="nem">库房滴滴</p>
+                                <p class="ooo">O2O工业地产交易服务平台</p>
+                            </div>
+                        </a>
+                        <div class="main_nav">
+                            <a href="home.html" class="tab  active ">网站首页</a>
+                            <a href="yuanqu.html" class="tab">园区招商</a>
+                            <a href="changfang.html" class="tab">厂房</a>
+                            <a href="cangku.html" class="tab">仓库</a>
+                            <a href="tudi.html" class="tab">土地</a>
+                            <a href="qiuzuqiugou.html" class="tab">求租求购</a>
+                            <a href="agent.html" class="tab">经纪人
+                                <img src="./img/hot.gif" class="tag">
+                            </a>
+                            <a href="information.html" class="tab">地产资讯</a>
+                            <a href="dichan.html" class="tab">地产百科</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-30">
+            <div class="container at-table">
+                <div class="new_left_wapper">
+                    <a href="mainIndex.html" class="new_left_item link first active">会员中心首页</a>
+                    <a href="post.html" class="qwe">
+                        <div class="new_left_item toggle active" id="active">
+                            <span>
+                                信息发布
+                            </span>
+                        </div>
+                    </a>
+                    <a href="publish.html" class="qwe">
+                        <div class="new_left_item toggle active">
+                            <span>
+                                我的信息
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="authentication" id="renzheng">
+                    <div class="layui-layer-title" style="text-align: center;font-size: 24px;padding: 0px 80px;height: 70px;line-height: 70px;background-color: rgb(255, 255, 255);cursor: move;border-bottom: 1px solid rgb(212, 212, 212);">
+                        会员认证</div>
+                    <div class="layui-layer-content">
+                        <div class="certification">
+                            <span class="certification-tip">为了保障您的个人权益及账号安全，同时根据《互联网实名制规定》的有关要求，用户需要进行实名制认证，同时认证资料经过双重加密，不会泄露任何个人隐私。</span>
+                            <a href="" class="certification-btn">重新认证</a>
+                            <p class="tip">我们将在1-3个工作日完成认证，届时您将会享受更优质的服务。</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="guanbi" onclick="guanbi()">x</a>
+                </div>
+
+                <!-- form区域 -->
+                <div class="form">
+                    <form class="valid-form" id="uploadForm">
+                        <div class="dqxz">
+                            <span class="asd">区域：</span>
+                            <div class="diqu">
+                                <div class="formControls per50 choose-place">
+                                    <span class="select-box f-l per30 mr-10 error-parent" data-toggle="distpicker" id="distpicker">
+                                        <select id="province"></select>
+                                        <select id="city"></select>
+                                        <select id="qu"></select>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dqxz">
+                            <span class="asd">标题：</span>
+                            <input type="text" class="input" name="title" id="title">
+                        </div>
+                        <div class="dqxz">
+                            <span class="asd">地址：</span>
+                            <input type="text" class="input" name="address" id="address">
+                        </div>
+                        <div class="dqxz">
+                            <span class="asd">价格：</span>
+                            <input type="text" class="input" id="rent" name="rent">
+                            <select id="jg">
+                                <option>请选择</option>
+                                <option>元/㎡/天</option>
+                                <option>元/㎡/月</option>
+                                <option>元/月</option>
+                                <option>元/年</option>
+                                <option>元/平方/年</option>
+                            </select>
+                            <span class="my">0表示面议</span>
+                        </div>
+                        <div class="dqxz">
+                            <span class="asd">面积：</span>
+                            <input type="text" class="input" id="area" name="area">
+                            <select id="mj">
+                                <option>请选择</option>
+                                <option>平方米</option>
+                                <option>亩</option>
+                            </select>
+                        </div>
+                        <div class="dqxz" name='subleaseType' id="subleaseType">
+                            <span class="asd">分租：</span>
+                            <input type="radio" name="subleaseType" id="model1" value="0" checked />
+                            <label for="model1">是</label>
+                            <input type="radio" name="subleaseType" id="model2" value="1" />
+                            <label for="model2">否</label>
+                        </div>
+                        <div class="dqxz">
+                            <span class="asd">租期：</span>
+                            <select id="leasePeriod">
+                                <option>请选择</option>
+                                <option>1年</option>
+                                <option>2年</option>
+                                <option>3年</option>
+                                <option>4年</option>
+                                <option>5年</option>
+                                <option>10年</option>
+                            </select>
+                        </div>
+                        <div class="dqxz">
+                            <span>基础设施：</span>
+                            <input type="text" class="input" name="infrastructure" id="infrastructure">
+                        </div>
+                        <div class="dqxz">
+                            <span>周边配套：</span>
+                            <input type="text" class="input" name="peripheralPackage" id="peripheralPackage">
+                        </div>
+                        <!-- <div class="dqxz">
+                            <span>建筑结构：</span>
+                            <input type="text" class="input" name="buildingStructure" id="buildingStructure">
+                        </div> -->
+                        <div class="dqxz">
+                            <span>适合企业：</span>
+                            <input type="text" class="input" name="suitableBusiness" id="suitableBusiness">
+                        </div>
+                        <div class="dqxz">
+                            <span>详情描述：</span>
+                            <textarea type="text" class="input" placeholder="请输入详情描述" id="detailedDescription" name='detailedDescription'></textarea>
+                        </div>
+                        <div class="dqxz" id="person">
+                            <span>联系人：</span>
+                            <input type="text" class="input-text size-M" id="contact" name="contact">
+                        </div>
+                        <div class="dqxz">
+                            <span>联系电话：</span>
+                            <input type="text" class="input-text size-M" name="contactPhone" id="contactPhone">
+                            <span class="ct">请保持电话畅通,以免错失业务</span>
+                        </div>
+                        <div class="a">
+                            <input type="file" accept="image/gif,image/jpeg,image/png,image/jpg" id="upload" name="files" multiple="multiple">
+                            <div id="image"></div>
+                        </div>
+                        <div class="dqxz">
+                            <a id="submi" onclick="submit()">发布信息</a>
+                        </div>
+                        <div class="dqxz">
+                            <div class="mt-50 Huialert Huialert-success" id="green">
+                                <div class="tips-line">1、个人/企业会员可免费发布信息，系统默认上架您最早发布的1条信息，超出信息您可以选择委托代理或付费上架展示；</div>
+                                <div class="tips-line">2、中介/园区会员可免费发布1条信息，超出可购买VIP会员服务；</div>
+                                <div class="tips-line">3、购买置顶服务的信息不受系统审核状态影响，正常显示；</div>
+                                <div class="tips-line">前往购买
+                                    <a href="" class="link">
+                                        <img src="./img/VIP.png" style="width: 15px;height:15px;position: relative;top: 3px;">
+                                        <b>会员包年服务</b>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="new_footer">
+            <div class="container">
+                <div class="ewm" id="ewm">
+                    <img src="./img/1556788963.png">
+                    <p>下载库房滴滴APP</p>
+                    <div class="xs" onclick="xs()">
+                        <img src="./img/goright (1).png" style="width: 12px;height:12px;" id="xsimg">
+                    </div>
+                </div>
+                <!-- <div class="links_wapper">
+                    <ul class="lists">
+                        <h4>帮助中心</h4>
+                        <li><a href="">常见问题</a></li>
+                        <li><a href="">更多帮助</a></li>
+                        <li><a href="">意见反馈</a></li>
+                        <li><a href="">隐私权条款</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>关注我们</h4>
+                        <li><a href="" title="安通厂房网新浪微博" target='_blank'>新浪微博</a></li>
+                        <li><a href="" title="安通厂房网熊掌号" target='_blank'>熊掌号</a>
+                        </li>
+                        <li><a href="" title="安通厂房网APP下载" target='_blank'>APP下载</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>了解库房</h4>
+                        <li><a href="">了解库房滴滴</a></li>
+                        <li><a href="">加入库房滴滴</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>会员服务</h4>
+                        <li><a href="">会员介绍</a></li>
+                        <li><a href="">推广服务</a></li>
+                        <li><a href="" target="_blank">开通VIP服务</a></li>
+                    </ul>
+                    <div class="code">
+                        <p class="subtitle">扫一扫下载APP</p>
+                        <img src="./img/1556788963.png" />
+                        <p class="tip">库房滴滴APP</p>
+                    </div>
+                </div> -->
+                <div class="copyright_wapper">
+                    <p class="copyright">Copyright © 2019 库房滴滴 浙ICP备14017628号 公安备案：33011002013057 增值电信业务经营许可证：浙B2-20140369
+                    </p>
+                    <!-- <div class="tabs">
+                            <a href="">
+                                <img src="./img/link1.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link2.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link3.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link4.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link5.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link6.png" />
+                            </a>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    function showImg() {
+        document.getElementById("wxImg").style.display = 'block';
+    }
+
+    function hideImg() {
+        document.getElementById("wxImg").style.display = 'none';
+    }
+</script>
+<script>
+    var app = new Vue({
+        el: '#header',
+        data: {
+            phone: localStorage.login
+        }
+    })
+
+    function qingchu() {
+        localStorage.clear();
+        window.location = "home.html";
+    }
+</script>
+<script>
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    //接收URL中的参数booksId
+    var types = getUrlParam('types');
+    var status = getUrlParam('status');
+    console.log('types:' + types);
+    console.log('status:' + status);
+    var serveHost = getServerHost();
+
+    var app = new Vue({
+        el: '#all_wapper',
+        data: {
+            isEnd: 1
+        },
+        methods: {
+            findData: function() {
+                $.ajax({
+                    url: serveHost + '/realNameSystem/queryRealNameSystemByUid',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        uid: localStorage.uid,
+                        token: localStorage.token
+                    },
+                    async: false,
+                    success: function(data) {
+                        isEnd = data.isEnd;
+                        if (isEnd == 1) {
+                            document.getElementById('renzheng').style.display = 'block'
+                        }
+                    }
+                })
+            }
+        },
+    })
+    app.findData();
+
+    function qingchu() {
+        localStorage.clear();
+        window.location = './home.html';
+    };
+
+    function submit() {
+        var formData = new FormData();
+        var re = /^[0-9]+.?[0-9]*$/; //判断字符串是否为数字 //判断正整数 /^[1-9]+[0-9]*]*$/ 
+        var a = $("#province").find("option:selected").text();
+        var b = $("#city").find("option:selected").text();
+        var c = $("#qu").find("option:selected").text();
+        var d = $("#qqq").find("option:selected").text();
+        var rentUnit = $("#jg").find("option:selected").text();
+        var areaUnit = $("#mj").find("option:selected").text();
+        var leasePeriod = $("#leasePeriod").find("option:selected").text();
+        var regiona = a + b + c;
+        var title = $("#title").val();
+        var address = $("#address").val();
+        var rent = $("#rent").val();
+        var area = $("#area").val();
+        var subleaseType = $('#subleaseType input:radio:checked').val();
+        var infrastructure = $("#infrastructure").val();
+        var peripheralPackage = $("#peripheralPackage").val();
+        var buildingStructure = $("#buildingStructure").val();
+        var suitableBusiness = $("#suitableBusiness").val();
+        var detailedDescription = $("#detailedDescription").val();
+        var contact = $("#contact").val();
+        var contactPhone = $("#contactPhone").val();
+        var files = $("#upload")[0].files[0];
+        formData.append("region", regiona);
+        formData.append("types", types);
+        formData.append("status", status);
+        formData.append("subleaseType", subleaseType);
+        formData.append("rent", rent);
+        formData.append("area", area);
+        formData.append("rentUnit", rentUnit);
+        formData.append("areaUnit", areaUnit);
+        formData.append("leasePeriod", leasePeriod);
+        formData.append("title", title);
+        formData.append("address", address);
+        formData.append("infrastructure", infrastructure);
+        formData.append("buildingStructure", 0);
+        formData.append("peripheralPackage", peripheralPackage);
+        formData.append("suitableBusiness", suitableBusiness);
+        formData.append("detailedDescription", detailedDescription);
+        formData.append("contact", contact);
+        formData.append("contactPhone", contactPhone);
+        formData.append("latitude", '30.28');
+        formData.append("longitude", '120.15');
+        formData.append("token", localStorage.token);
+        formData.append("uid", localStorage.uid);
+        formData.append("files", files)
+        if (title == '') {
+            layer.tips('不能为空', '#title', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (address == '') {
+            layer.tips('不能为空', '#address', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (rent == '') {
+            layer.tips('不能为空', '#rent', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        } else if (!re.test(rent)) {
+            layer.tips('价格只能为数字', '#rent', {
+                tips: [2, '#CA5E59']
+            });
+            document.getElementById("rent").value = "";
+            return false;
+        }
+        if (area == '') {
+            layer.tips('不能为空', '#area', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        } else if (!re.test(area)) {
+            layer.tips('面积只能为数字', '#area', {
+                tips: [2, '#CA5E59']
+            });
+            document.getElementById("area").value = "";
+            return false;
+        }
+        if(leasePeriod=='请选择'){
+            layer.tips('不能为空', '#leasePeriod', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if(rentUnit=='请选择'){
+            layer.tips('请选择价格单位', '#jg', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if(areaUnit=='请选择'){
+            layer.tips('请选择面积单位', '#mj', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (subleaseType == '') {
+            layer.tips('不能为空', '#subleaseType', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (infrastructure == '') {
+            layer.tips('不能为空', '#infrastructure', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (peripheralPackage == '') {
+            layer.tips('不能为空', '#peripheralPackage', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (buildingStructure == '') {
+            layer.tips('不能为空', '#buildingStructure', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (suitableBusiness == '') {
+            layer.tips('不能为空', '#suitableBusiness', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (detailedDescription == '') {
+            layer.tips('不能为空', '#detailedDescription', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (contact == '') {
+            layer.tips('不能为空', '#contact', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (contactPhone == '') {
+            layer.tips('不能为空', '#contactPhone', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        } else if (!(/^1[3456789]\d{9}$/.test(contactPhone))) {
+            layer.tips('手机号码错误，请核对后重新输入', '#contactPhone', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        if (files == undefined) {
+            layer.tips('不能为空', '#upload', {
+                tips: [2, '#CA5E59']
+            });
+            return false;
+        }
+        $.ajax({
+            url: serveHost + '/fplHouse/addFplHouse',
+            type: 'post',
+            dataType: 'json',
+            data: formData,
+            async: false,
+            cache: false,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                if (data.code == 100107) {
+                    layer.msg('手机号未通过验证', {
+                        icon: 2
+                    })
+                }else if(data.code == -2){
+                    layer.confirm('用户登录过期，请重新登陆', {
+                        btn: ['去登录','放弃'] //按钮
+                    }, function(){
+                        window.location='./login.html'
+                    }, function(){
+                        
+                    });
+                } else {
+                    layer.msg('信息发布成功', {
+                        icon: 1
+                    });
+                    window.location = "./mainIndex.html"
+                }
+            },
+            error: function(data) {
+                layer.msg('用户信息登录过期，请重新登陆', {
+                    icon: 2,
+                }),
+                setTimeout(
+                    function(){
+                        window.location='./login.html'
+                },1000)
+            }
+        })
+    }
+
+    function guanbi() {
+        document.getElementById('renzheng').style.display = 'none'
+    }
+</script>
+<script>
+    var serveHost = getServerHost();
+
+    function changeImg() {
+        var files = new FormData($('#uploadForm')[0]);
+        $.ajax({
+            type: 'post',
+            url: serveHost + "/picture/uploadPic",
+            data: files,
+            cache: false,
+            processData: false,
+            contentType: false,
+        }).success(function(data) {
+            layer.msg('图片上传成功', {
+                icon: 1
+            })
+            localStorage.setItem('files', data.data);
+        }).error(function() {
+            layer.msg('图片上传失败', {
+                icon: 2
+            })
+        });
+    }
+</script>
+<script>
+    var flag = true;
+
+    function xs() {
+        var img = document.getElementById("xsimg");
+        var box = document.getElementById('ewm');
+        if (flag) {
+            img.src = "./img/goright (2).png";
+            box.style.cssText = 'transform: translateX(180px);transition: all 0.5s ease-in-out 0s;'
+            flag = false;
+        } else {
+            img.src = "./img/goright (1).png";
+            box.style.cssText = 'transform: translateX(0);transition: all 0.5s ease-in-out 0s;'
+            flag = true;
+        }
+    }
+</script>

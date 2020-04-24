@@ -1,0 +1,510 @@
+.bg-interval {
+    background: #f8f8f8;
+}
+
+.sign-wapper {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.sign-wapper .sign-hd {
+    text-align: center;
+    display: flex;
+    margin-left: 150px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.sign-wapper .sign-box {
+    background: #FFFFFF;
+    text-align: center;
+    padding: 0 30px 5px;
+    box-shadow: 0 0 5px #cccccc;
+}
+
+.sign-wapper .sign-box h3 {
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.sign-wapper .sign-box .input-line {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.check-box,
+.radio-box {
+    padding-left: 0;
+    cursor: default;
+}
+
+.check-box,
+.radio-box {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.iradio-blue.checked {
+    background-position: -140px 0;
+}
+
+.sign-wapper .sign-box .input-line .radio-box>label,
+.sign-wapper .sign-box .input-line .check-box>label {
+    font-size: 12px;
+}
+
+.radio-box>label,
+.check-box>label {
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.l,
+.f-l {
+    float: left!important;
+    _display: inline;
+}
+
+.icheckbox-blue,
+.iradio-blue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(blue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.iradio-blue.checked input {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    display: block;
+    width: 140%;
+    height: 140%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+input[type="radio" i] {
+    margin: 3px 3px 0px 5px;
+}
+
+input[type="radio" i] {
+    -webkit-appearance: radio;
+    box-sizing: border-box;
+}
+
+.sign-wapper .sign-box .input-line {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sign-wapper .sign-box .input-line input[type="text"],
+.sign-wapper .sign-box .input-line input[type="password"] {
+    padding: 0 5%;
+    width: 90%;
+    color: #333;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #e4e4e4;
+}
+
+.sign-wapper .sign-box .input-line.has-code .phone-code.code {
+    background: #ff9600;
+    color: #FFFFFF;
+}
+
+.sign-wapper .sign-box .input-line.has-code .phone-code {
+    float: right;
+    width: 25%;
+    height: 44px;
+    line-height: 44px;
+    background: #f3f3f3;
+    cursor: pointer;
+}
+
+.sign-wapper .sign-box .input-line {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sign-wapper .sign-box .input-line.has-code input {
+    float: left;
+    width: 60%;
+    margin-right: -2px;
+}
+
+.check-box,
+.radio-box {
+    padding-left: 0;
+    cursor: default;
+}
+
+.icheckbox-blue.checked {
+    background-position: -40px 0;
+}
+
+.sign-wapper .sign-box .input-line .radio-box>label,
+.sign-wapper .sign-box .input-line .check-box>label {
+    font-size: 12px;
+}
+
+.radio-box>label,
+.check-box>label {
+    cursor: pointer;
+    line-height: 25px;
+    padding-left: 30px;
+}
+
+.sign-wapper .sign-box .input-line .show-info {
+    line-height: 25px;
+    margin-left: -40px;
+    margin-top: -2px;
+}
+
+.sign-wapper .sign-box .input-line .hot {
+    color: #ff9600;
+}
+
+.f-12 {
+    font-size: 12px !important;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.sign-wapper .sign-box .input-line button {
+    height: 42px;
+    width: 100%;
+    color: #ffffff;
+    background: #ffb244;
+    border: 0;
+}
+
+.sign-wapper .sign-box .input-line .hot {
+    color: #ff9600;
+}
+
+.r,
+.f-r {
+    float: right!important;
+    _display: inline;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.footer-bar {
+    background: #1a2330;
+    padding: 30px 0 30px 0;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-bar ul {
+    margin: 0 auto 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.footer-bar ul li:first-child {
+    border-left: 0;
+}
+
+.footer-bar ul li {
+    display: inline;
+    padding: 0 25px;
+    border-left: 1px solid #FFFFFF;
+}
+
+.footer-bar ul li a {
+    color: #FFFFFF;
+}
+
+.footer-bar p {
+    text-align: center;
+    color: #8a8a8a;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.modal-content {
+    width: 800px;
+    height: 522px;
+    position: relative;
+    left: 550px;
+    top: 130px;
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: 0;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+.radius {
+    border-radius: 4px;
+}
+
+.modal-header {
+    min-height: 16.42857143px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.modal-header h3,
+.modal-header .modal-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.modal-header .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.close {
+    font-size: 20px;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1040;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.modal-dialog .modal-body {
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.modal-body {
+    position: relative;
+    padding: 15px;
+    overflow-y: visible;
+    word-break: break-all;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.radius .modal-footer {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.modal-footer {
+    padding: 15px;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #f5f5f5;
+    border-top: 1px solid #eee;
+}
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+
+.modal-backdrop.fade {
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.sign-wapper .sign-box .input-line .radio-box>label,
+.sign-wapper .sign-box .input-line .check-box>label {
+    font-size: 12px;
+    position: relative;
+    left: -25px;
+    top: -2px;
+}
+
+.check-box,
+.radio-box {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    /* padding-left: 30px; */
+    padding-right: 20px;
+}
+
+.icheckbox-blue.checked ins {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    display: block;
+    width: 140%;
+    height: 140%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+}
+
+.icheckbox-blue.checked input {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    display: block;
+    width: 140%;
+    height: 140%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+}
+
+.icheckbox-blue,
+.iradio-blue {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url(blue.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-hd img {
+    width: 55px;
+    height: 45px;
+}
+
+.sign-hd p {
+    font-family: "宋体";
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: left;
+    letter-spacing: 22px;
+}
+
+#span {
+    font-size: 6px;
+    position: relative;
+    top: -15px;
+    left: -8px;
+}
+
+#zhuce {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    border: 0;
+}
+
+#zhuce1 {
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background: #ff9600;
+    border: 0;
+}

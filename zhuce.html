@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="7NGtawMkau" />
+    <title>会员注册-库房滴滴</title>
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <link rel="stylesheet" type="text/css" href="./css/zhuce.css" />
+    <script src="./js/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+
+<body>
+    <div id="antong-content" class="bg-interval">
+        <div class="sign-wapper">
+            <div class="sign-hd mb-20">
+                <img src="./img/logo1.png" />
+                <div>
+                    <p>库房滴滴</p>
+                    <span id="span">O2O工业地产交易服务平台</span>
+                </div>
+            </div>
+            <form class="sign-box valid-form" action="http://user.atcfw.com/register/doregister.html" method="post">
+                <h3>注册会员</h3>
+                <div class="input-line clearfix">
+                    <div class="radio-box f-l">
+                        <input type="radio" id="radio-11" name="type" value="1" checked="checked">
+                        <label for="radio-11">个人/企业</label>
+                    </div>
+                    <div class="radio-box f-l">
+                        <input type="radio" id="radio-12" name="type" value="2">
+                        <label for="radio-12">中介</label>
+                    </div>
+                    <div class="radio-box f-l">
+                        <input type="radio" id="radio-13" name="type" value="3">
+                        <label for="radio-13">园区</label>
+                    </div>
+                </div>
+                <div class="input-line">
+                    <input type="text" placeholder="手机号" datatype="m" nullmsg="手机号不能为空" errormsg="手机号为11位数字" name="mobile" id="userPhone" />
+                </div>
+                <div class="input-line has-code clearfix">
+                    <input type="text" placeholder="验证码" id="code" datatype="n6-6" nullmsg="验证码不能为空" errormsg="验证码为6位数字" name="code" />
+                    <span class="phone-code code" id="codes" data-wait-msg="获取验证码([second])" data-mobile-input="#js-mobile-input" data-init-second-left="60">获取验证码</span>
+                </div>
+                <div class="input-line">
+                    <input type="password" id="passWord" placeholder="密码" datatype="*6-18" nullmsg="密码不可为空" errormsg="密码为6-18位字符" name="password" autocomplete="new-password" />
+                    <i class="Hui-iconfont Hui-iconfont-yanjing icon-show"></i>
+                </div>
+                <div class="input-line clearfix">
+                    <div class="check-box f-l">
+                        <input type="checkbox" id="radio-16" onclick="if (this.checked) {enable()} else {disable()}">
+                        <label for="radio-16">我已阅读并接受</label>
+                    </div>
+                    <a class="f-12 hot show-info f-l" onclick="showModel()">《库房滴滴服务协议》</a>
+                </div>
+                <div class="input-line">
+                    <input type="button" id="zhuce" disabled="true" class="btn valid-btn" value="确定">
+                </div>
+                <div class="input-line clearfix">
+                    <span class="f-r">已有账号,去 <a href="login.html" class="hot">登录</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--用户协议弹出框-->
+    <div id="modal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content radius">
+                <div class="modal-header">
+                    <h3 class="modal-title">库房滴滴服务协议</h3>
+                    <a class="close" data-dismiss="modal" onclick="hideModel()" href="javascript:void();">×</a>
+                </div>
+                <div class="modal-body">
+                    <p>请仔细阅读以下使用许可条款，如果您不同意以下任何一点，请立即停止使用本网站。 您点击“我同意”、完成注册程序或使用服务，即表示您声明您有资格获得账户，并且您统一受库房滴滴使用许可协议的约束。库房滴滴将本网站的最终使用许可权授予您，但您必须想库房滴滴作以下保证：
+                        <br> 《库房滴滴使用许可证》（以下称《协议》）是您（个人或单一机构团体）与上述库房滴滴版权所有人杭州库房信息技术有限公司（以下称“版权人”或“库房”）之间的法律协议。在您使用本网站之前，请务必阅读此《协议》，任何与《协议》有关的软件、电子文档等都应是按本协议的条款而授予您的，同时本《协议》亦适用于任何有关本软件产品的后期发行和升级。您一旦安装、复制、下载、访问或以其它方式使用本网站产品，即表示您同意接受本《协议》各项条款的约束。如您不同意本《协议》的条款，那么，版权所有人库房则不予将本网站产品的使用权授予您。在这种情况下，您不得使用、复制或传播本网站产品。
+                        本网站产品受中华人民共和国著作权法及国际著作权条约和其它知识产权法及条约的保护。
+                        <br> 1.版权
+                        <br> 本网站产品（包括但不限于本网站产品中所含的任何图像、照片、动画、文字和附加程序）、随附的印刷材料、及本网站产品的任何副本的一切所有权和知识产权，均由版权人杭州库房信息技术有限公司拥有。通过使用本“网站产品”可访问的内容的一切所有权知识均属于各自内容的所有者拥有并可能受使用著作权或其他知识产权法律和跳跃的保护。本《协议》不授予您使用这些内容的权利。
+                        <br> 2.保证
+                        <br> 本网站版权所有人杭州库房信息技术有限公司特此申明对本网站产品之使用不提供任何保证。版权人将不对任何用户保证本网站产品的适用性，不保证无故障产生；亦不对任何用户使用此网站所遭遇到的任何理论上的或实际上的损失承担责任。 由于本网站产品可以通过网络途径访问、传播，对于从非杭州库房信息技术有限公司指定网址访问或下载所获得的任何服务，杭州库房信息技术有限公司无法保证该产品是否感染计算机病毒、是否隐藏有伪装的特洛伊木马程序等黑客软件，也不承担由此引起的直接和间接损害责任。不保证统计数据在一切方面完全准确。
+                        <br> 3.尊重国家和他人合法权益
+                        <br> 杭州库房信息技术有限公司特别提醒用户，使用互联网必须遵守国家有关的法律和政策，如刑法、国家安全法、保密法、计算机信息系统安全保护条例等，保护国家利益，保护国家安全，对于违法使用互联网络而引起的一切责任，由用户负全部责任。 杭州库房信息技术有限公司一贯尊重他人知识产权及其他合法权益，呼吁用户也要同样尊重知识产权及 其他合法权益，不得利用本网站产品对他人的知识产权及其他合法权益进行侵害。<br> 4.账户、密码安全
+                        <br> 用户完成注册程序获得账户、密码后，应保护自身的密码安全，并对所有在用户账户下使用的行为包括但不限于用户自身和任何第三方在用户账户下的行为承担全部责任。用户一旦知道账户存在未经用户授权使用的行为，应立即通知杭库房信息技术有限公司。用户确认并统一杭库房信息技术有限公司可以为维护改进服务需要，使用用户的账户和密码登录服务。
+                        <br> 5.隐私权
+                        <br> 杭州库房信息技术有限公司尊重并保护用户的个人隐私权，您注册的用户名、电子邮件地址等个人资料、网站资料，非经您亲自许可或根据相关法律、法规的强制性规定，以及库房为维护网站服务项目为目的，不会做股东泄露给第三方。
+                        <br> 6.费用
+                        <br> 在杭州库房信息技术有限公司对您发出变更费用和支付政策的通知之前，（该通知将可能以电子邮件、系统消息、网站公告或其他方式向您发出），用户可以免费使用。用户收到费用和支付通知后，如不同意继续使用网站服务的，应立即注销自己的账户。
+                        <br> 7.争议解决地
+                        <br> 因本协议或使用本网站产品所引起的您与版权人之间的争议由杭库房信息技术有限公司住所地人民法院管辖审理。
+                        <br> 8.本网站产品版权人杭州库房信息技术有限公司对本网站用户许可协议的各项内容拥有最终解释权。
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="hideModel()" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="mt-20">
+        <div class="footer-bar">
+            <div class="container clearfix">
+                <ul class="clearfix">
+                    <li><a href="">关于我们</a></li>
+                    <li><a href="">尊选资源</a></li>
+                    <li><a href="">新闻资讯</a></li>
+                    <li><a href="" target="_blank">环境保护税计算器</a></li>
+                    <li><a href="">法律声明</a></li>
+                    <li><a href="">帮助中心</a></li>
+                    <li><a href="">广告服务</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+                <p>Copyright &copy; 2019 库房滴滴</p>
+                <p><span>浙ICP备14017628号</span> <span class="ml-10">公安备案：33011002013057</span> <span class="ml-10">增值电信业务经营许可证：浙B2-20140369</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var serverHost = getServerHost();
+
+    document.getElementById("codes").onclick = function() {
+        var userphone = $("#userPhone").val();
+        var count = 60;
+
+        $.ajax({
+            url: serverHost + '/login/geCheckCode',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                userPhone: userphone,
+                type: 1
+            },
+            async: false,
+            success: function(data) {
+                if (data.code == 100100) {
+                    alert('用户手机号已存在')
+                    return false
+                }
+                if (userphone == '') {
+                    alert('请输入手机号');
+                } else if (!(/^1[3456789]\d{9}$/.test(userphone))) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                } else if (data.code == 100108) {
+                    alert('验证码发送失败')
+                    return false;
+                } else {
+                    alert('验证码发送成功');
+                    localStorage.setItem('shoujihao', userphone);
+                    $("#codes").attr('disabled', 'disabled');
+                    $("#codes").html(count + "秒后重试");
+                    var timer = setInterval(function() {
+                        count--;
+                        $("#codes").html(count + "秒后重试");
+                        if (count == 0) {
+                            clearInterval(timer);
+                            $("#codes").attr("disabled", false); //启用按钮  
+                            $("#codes").html("重新发送验证码");
+                            code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+                        }
+                    }, 1000);
+                }
+            }
+        });
+    }
+    document.getElementById('zhuce').onclick = function() {
+
+        var userphone = $("#userPhone").val();
+        var code = $("#code").val();
+        var passWord = $("#passWord").val();
+        var type = $("input[type='radio']:checked").val();
+
+        $.ajax({
+            url: serverHost + '/login/registrationUser',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                userPhone: userphone,
+                code: code,
+                passWord: passWord,
+                type: type,
+            },
+            async: false,
+            success: function(data) {
+                if (userphone == '') {
+                    alert('请输入手机号');
+                    return false;
+                } else if (!(/^1[3456789]\d{9}$/.test(userphone))) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                } else if (userphone != localStorage.shoujihao) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                }
+                if (code == '') {
+                    alert('请输入短信验证码');
+                    return false;
+                } else if (data.code == 100104) {
+                    alert('验证码已过期');
+                    return false;
+                } else if (data.code == 100106) {
+                    alert('验证码错误');
+                    return false;
+                } else if (data.code == 100100) {
+                    alert('用户手机号已经存在')
+                    return false
+                }
+                if (passWord == '') {
+                    alert('请输入密码');
+                    return false;
+                }
+                alert('注册成功');
+                window.location = './login.html'
+            }
+        })
+    }
+</script>
+<script>
+    function showModel() {
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    function hideModel() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+<script type="text/javascript">
+    function disable() {
+        document.getElementById("zhuce1").disabled = true;
+        var zhuce = document.getElementById('zhuce') || document.getElementById('zhuce1'); //这里要做兼容，要不你改过id第一个就获取不到对象了
+        zhuce.id = zhuce.id == 'zhuce' ? 'zhuce1' : 'zhuce';
+    }
+
+    function enable() {
+        document.getElementById("zhuce").disabled = false;
+        var zhuce = document.getElementById('zhuce') || document.getElementById('zhuce1'); //这里要做兼容，要不你改过id第一个就获取不到对象了
+        zhuce.id = zhuce.id == 'zhuce' ? 'zhuce1' : 'zhuce';
+    }
+</script>

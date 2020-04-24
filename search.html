@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <title>库房滴滴</title>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery-1.4.4.min.js"></script>
+    <script src="./js/common.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="top">
+                <img src="./img/logo1.png">
+                <div class="search-group clearfix">
+                    <div class="search-list-wapper">
+                        <input type="text" class="search-text" id="sousuo">
+                        <span class="search-btn" @click="sousuo()" id="sou">
+                        <img src="./img/search.png">
+                    </span>
+                    </div>
+                    <p class="result-count">搜索到<span id="ti">“{{ti}}”</span>相关结果<span id="con"> 10 </span>条</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 返回记录 -->
+        <div class="section">
+            <div class="list" v-for='item in list'>
+                <a v-bind:href="'changfang1.html?productId='+item.productId">
+                    <h5>
+                        {{item.title}}
+                    </h5>
+                    <div class="img-content">
+                        <img src="./img/cf1.png">
+                        <div class="content">
+                            <p>{{item.peripheralPackage}}</p>
+                            <div class="dsc">
+                                <span class="ml-10">{{item.createTime}}</span>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <p><span>{{item.rent}}</span>{{item.rentUnit}}</p>
+                            <p><span>{{item.area}}</span>{{item.areaUnit}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="page-wapper text-c">
+                <div class="pagination" id="Pagination">
+                    <ul>
+                        <a v-on:click="pageClickSub()">上一页</a>
+                        <a v-on:click="pageClickAdd()">下一页</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="new_footer">
+            <div class="container">
+                <div class="ewm" id="ewm">
+                    <img src="./img/1556788963.png">
+                    <p>下载库房滴滴APP</p>
+                    <div class="xs" onclick="xs()">
+                        <img src="./img/goright (1).png" style="width: 12px;height:12px;" id="xsimg">
+                    </div>
+                </div>
+                <div class="copyright_waper">
+                    <p>Copyright © 2019 库房滴滴 浙ICP备14017628号 公安备案：33011002013057 增值电信业务经营许可证：浙B2-20140369</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    //接收URL中的参数booksId
+    var title = getUrlParam('title');
+    var title = decodeURI(title); //只需要转一次码  
+
+    var flag = true;
+    var serverHost = getServerHost();
+
+    function xs() {
+        var img = document.getElementById("xsimg");
+        var box = document.getElementById('ewm');
+        if (flag) {
+            img.src = "./img/goright (2).png";
+            box.style.cssText = 'transform: translateX(180px);transition: all 0.5s ease-in-out 0s;'
+            flag = false;
+        } else {
+            img.src = "./img/goright (1).png";
+            box.style.cssText = 'transform: translateX(0);transition: all 0.5s ease-in-out 0s;'
+            flag = true;
+        }
+    }
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            list: [],
+            ti: title,
+        },
+        methods: {
+            findData: function() {
+                var _this = app;
+                $.ajax({
+                    url: serverHost + '/fplHouse/queryFplHousePOByTitle',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        title: title,
+                        token: localStorage.token
+                    },
+                    async: false,
+                    success: function(data) {
+                        _this.list = data.data;
+                        var ti = document.getElementById('ti');
+                        var con = document.getElementById('con');
+                        ti.innerText = ' "' + title + '" ';
+                        con.innerText = ' "' + _this.list.length + '" ';
+                    }
+                })
+            },
+            sousuo: function() {
+                var _this = app;
+                var titlea = $("#sousuo").val();
+                $.ajax({
+                    url: serverHost + '/fplHouse/queryFplHousePOByTitle',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        title: titlea,
+                        token: localStorage.token,
+                        pageSize: 1
+                    },
+                    async: false,
+                    success: function(data) {
+                        _this.list = data.data;
+                        var ti = document.getElementById('ti');
+                        var con = document.getElementById('con');
+                        ti.innerText = ' "' + titlea + '" ';
+                        con.innerText = ' "' + _this.list.length + '" ';
+
+                    }
+                })
+            }
+        },
+    })
+    app.findData();
+    $('body').keydown(function() {
+        if (event.keyCode == 13) {
+            $('#sou').click();
+        };
+    });
+</script>

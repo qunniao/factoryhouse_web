@@ -1,0 +1,377 @@
+.hd-logo-wapper {
+    padding: 0 0 12px;
+    font-size: 14px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mt-30 img {
+    width: 70px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+#header h3 {
+    color: #383635;
+    font-size: 22px;
+    position: relative;
+    left: 80px;
+    top: -75px;
+    letter-spacing: 20px;
+}
+
+#header p {
+    position: relative;
+    top: -95px;
+    left: 80px;
+    font-size: 12px;
+    color: #C2C2C2;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+#antong-content {
+    position: relative;
+    top: -135px;
+}
+
+.hd-logo-wapper .purpose {
+    line-height: 50px;
+    margin-bottom: 0;
+    color: #303030;
+    font-size: 14px;
+    margin-top: -95px;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.r,
+.f-r {
+    float: right!important;
+    _display: inline;
+}
+
+.adver-box-right.bg-interval,
+.bg-interval.full-bg:not(.mt-15) {
+    background: #FFFFFF;
+}
+
+.bg-interval {
+    background: #f8f8f8;
+}
+
+.full-bg {
+    width: 100%;
+    min-width: 1200px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+.pt-15 {
+    padding-top: 15px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.entrance-body .hot-city {
+    margin-bottom: 30px;
+}
+
+.cl,
+.clearfix {
+    zoom: 1;
+}
+
+.entrance-body .hot-city .title {
+    float: left;
+    margin-right: 18px;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.entrance-body .hot-city .hot-city-list {
+    float: left;
+    max-width: 1100px;
+}
+
+.entrance-body .hot-city .hot-city-list a.now-city {
+    color: #fb8862;
+    font-weight: bold;
+}
+
+.entrance-body .hot-city .hot-city-list a {
+    margin: 0 10px;
+    color: #fd835a;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    float: left;
+    text-decoration: none;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.entrance-body .choose-city {
+    margin-bottom: 20px;
+}
+
+.entrance-body .choose-city .title {
+    float: left;
+    margin-right: 18px;
+    color: #555;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.entrance-body .choose-city .select-box {
+    width: 120px;
+    float: left;
+    line-height: 22px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.select-box,
+.select-box.size-M {
+    padding: 4px 5px;
+}
+
+.select-box {
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 100%;
+    display: inline-block;
+}
+
+.select-box .select {
+    border: none;
+}
+
+.select,
+.size-M .select {
+    font-size: 14px;
+}
+
+.select {
+    border: solid 1px #ddd;
+    box-sizing: border-box;
+    cursor: pointer;
+    line-height: normal;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.entrance-body h4 {
+    background: #FFFFFF;
+    padding: 15px 15px 10px 0;
+    margin: 0;
+    margin-bottom: 20px;
+    line-height: 16px;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.entrance-body .entrance-list {
+    display: table;
+    background: #FFFFFF;
+    border: 1px solid #eee;
+    margin-top: -1px;
+}
+
+.entrance-body .entrance-list h3 {
+    display: table-cell;
+    width: 80px;
+    padding: 0;
+    height: 100%;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.entrance-body .entrance-list h3>span {
+    display: inline-block;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    background: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+
+.entrance-body .entrance-list h3>span:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.entrance-body .entrance-list .entrance-block {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.entrance-body .entrance-list .entrance-line {
+    display: table;
+    width: 1100px;
+}
+
+.entrance-body .entrance-list .entrance-line span {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 20px;
+    width: 65px;
+    font-size: 16px;
+    line-height: 50px;
+    border-right: 1px solid #eee;
+    position: relative;
+}
+
+.entrance-body .entrance-list .entrance-line ul {
+    display: table-cell;
+    padding: 15px;
+}
+
+.entrance-body .entrance-list .entrance-line ul li {
+    float: left;
+    padding: 5px 9px;
+    list-style: none;
+    width: 100px;
+}
+
+.entrance-body .entrance-list .entrance-line ul li a.active {
+    color: #8a8a8a;
+    border-color: #8a8a8a;
+}
+
+.entrance-body .entrance-list .entrance-line ul li a {
+    color: #8a8a8a;
+    line-height: 20px;
+    font-size: 14px;
+    cursor: default;
+    text-decoration: none;
+}
+
+.entrance-body .entrance-list h3>span {
+    display: inline-block;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    background: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+
+.entrance-list:hover h3 span {
+    background: #f8b551;
+    color: #FFFFFF;
+}
+
+.entrance-list:hover .entrance-list {
+    background-image: url(../img/right123.png);
+}
+
+.ewm {
+    width: 170px;
+    height: 190px;
+    position: fixed;
+    right: 10px;
+    top: 470px;
+    background: #fff;
+    box-shadow: 2px 2px 9px 0px #c5c5c5;
+}
+
+.ewm img {
+    width: 170px;
+    height: 170px;
+}
+
+.ewm p {
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: -8px;
+    text-align: center;
+}
+
+.xs {
+    width: 20px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    border-right: 0;
+    position: relative;
+    top: -130px;
+    right: 21px;
+}
+
+.xs img {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    margin-top: 19px;
+}

@@ -1,0 +1,265 @@
+.bg-interval {
+    background: #f8f8f8;
+}
+
+.sign-wapper {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.sign-wapper .sign-hd {
+    position: relative;
+    left: 150px;
+}
+
+.sign-wapper .sign-hd img {
+    width: 45px;
+    float: left;
+}
+
+.ingtitle {
+    position: relative;
+    left: 5px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 25px;
+}
+
+.title2 {
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.sign-wapper .sign-box {
+    background: #FFFFFF;
+    text-align: center;
+    padding: 0 30px 5px;
+    box-shadow: 0 0 5px #cccccc;
+}
+
+.sign-wapper .sign-box h3 {
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-bottom: 35px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.sign-wapper .sign-box .input-line {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sign-wapper .sign-box .input-line input[type="text"],
+.sign-wapper .sign-box .input-line input[type="password"] {
+    padding: 0 5%;
+    width: 90%;
+    color: #333;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    border: 1px solid #e4e4e4;
+}
+
+.sign-wapper .sign-box .input-line input+i {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    margin-top: -16px;
+    right: 10px;
+}
+
+.r,
+.f-r {
+    float: right!important;
+    _display: inline;
+}
+
+a {
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cl:after,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.sign-wapper .sign-box .input-line button {
+    height: 42px;
+    width: 100%;
+    color: #ffffff;
+    background: #ffb244;
+    border: 0;
+}
+
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, "WenQuanYi Micro Hei", Verdana, sans-serif, "\5B8B\4F53";
+    font-size: 12px;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.check-box,
+.radio-box {
+    padding-left: 0;
+    cursor: default;
+}
+
+.sign-wapper .sign-box .input-line .hot {
+    color: #ff9600;
+}
+
+.icheckbox-blue.checked {
+    background-position: -40px 0;
+}
+
+.sign-wapper .sign-box .input-line .radio-box>label,
+.sign-wapper .sign-box .input-line .check-box>label {
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+    left: -30px;
+}
+
+.radio-box>label,
+.check-box>label {
+    cursor: pointer;
+    line-height: 25px;
+    padding-left: 30px;
+}
+
+.check-box,
+.radio-box {
+    float: left;
+}
+
+.sign-wapper .sign-box .input-line .third-list {
+    padding: 0 50px;
+}
+
+.sign-wapper .sign-box .input-line .third-list a {
+    float: left;
+    padding: 10px 30px 0;
+}
+
+.sign-wapper .sign-box .input-line .third-list a i.Hui-iconfont-share-qq,
+.sign-wapper .sign-box .input-line .third-list a i.icon-qq {
+    color: #66bde7;
+}
+
+.sign-wapper .sign-box .input-line .third-list a i {
+    font-size: 50px;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.sign-wapper .sign-box .input-line .third-list a i.Hui-iconfont-share-weixin,
+.sign-wapper .sign-box .input-line .third-list a i.icon-weixin {
+    color: #97dc73;
+}
+
+.sign-wapper .sign-box .input-line .third-list a i.Hui-iconfont-share-weibo,
+.sign-wapper .sign-box .input-line .third-list a i.icon-weibo {
+    color: #ff8f8f;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.footer-bar {
+    background: #1a2330;
+    padding: 30px 0 30px 0;
+    width: 100%;
+    min-width: 1200px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.footer-bar ul {
+    margin: 0 auto 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.footer-bar ul li:first-child {
+    border-left: 0;
+}
+
+.footer-bar ul li {
+    display: inline;
+    padding: 0 25px;
+    border-left: 1px solid #FFFFFF;
+}
+
+.footer-bar ul li a {
+    color: #FFFFFF;
+}
+
+.footer-bar p {
+    text-align: center;
+    color: #8a8a8a;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.sign-wapper .sign-box .input-line.has-code input {
+    float: left;
+    width: 60%;
+    margin-right: -2px;
+}
+
+.sign-wapper .sign-box .input-line.has-code .phone-code.code {
+    background: #ff9600;
+    color: #FFFFFF;
+}
+
+.sign-wapper .sign-box .input-line.has-code .phone-code {
+    float: right;
+    width: 25%;
+    height: 44px;
+    line-height: 44px;
+    background: #f3f3f3;
+    cursor: pointer;
+}

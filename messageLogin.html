@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="7NGtawMkau" />
+    <title>会员登录-库房滴滴</title>
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <meta name="keywords" content="厂房出租,厂房出售,土地出租,土地出售,仓库出租,厂房求租,园区招商">
+    <meta name="description" content="安通厂房网提供厂房出租、厂房出售、厂房求租求购、仓库出租、工业土地出租出售、园区招商的O2O工业地产交易服务平台，让企业选址一站式服务安全省心！">
+    <link rel="stylesheet" type="text/css" href="./css/messageLogin.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="./js/layui.js"></script>
+    <!--[if lt IE 9]>
+<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <script type="text/javascript">
+        //检测浏览器版本
+        $(document).ready(function() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
+            console.log(isIE)
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (fIEVersion <= 8) {
+                    $('#ieBlocker').css('display', 'block');
+                    //点击关闭弹框
+                    $('.continue').on('click', function() {
+                        $('#ieBlocker').css('display', 'none');
+                    })
+                }
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div id="antong-content" class="bg-interval">
+        <div class="sign-wapper">
+            <div class="sign-hd mb-20">
+                <img src="./img/logo1.png" />
+                <div class="ingtitle">
+                    <p class="title">库房滴滴</p>
+                    <p class="title2">O2O工业地产交易服务平台</p>
+                </div>
+            </div>
+            <form class="sign-box valid-form" action="http://user.atcfw.com/login/dologin.html" method="post">
+                <h3>会员登录</h3>
+                <div class="input-line">
+                    <input type="text" id="userPhone" placeholder="手机号" datatype="m" nullmsg="手机号不可为空" errormsg="手机号为11位数字" name="userPhone" />
+                </div>
+                <div class="input-line has-code clearfix">
+                    <input type="text" placeholder="验证码" id="code" datatype="n6-6" nullmsg="验证码不能为空" errormsg="验证码为6位数字" name="code" />
+                    <span class="phone-code code" id="codes" data-wait-msg="获取验证码([second])" data-mobile-input="#js-mobile-input" data-init-second-left="60">获取验证码</span>
+                </div>
+                <div class="input-line clearfix">
+                    <a href="login.html" class="f-r">密码登录</a>
+                </div>
+                <div class="input-line">
+                    <button type="button" class="btn valid-btn" id="denglu" v-on:click="denglu()">登录</button>
+                    <input type="hidden" name="redirect" value="http://www.atcfw.com/">
+                </div>
+                <div class="input-line clearfix">
+                    <a href="./zhuce.html" class="f-r hot">新用户注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="footer" class="mt-20">
+        <div class="footer-bar">
+            <div class="container clearfix">
+                <ul class="clearfix">
+                    <li><a href="http://www.atcfw.com/help/default/id/1.html">关于我们</a></li>
+                    <li><a href="http://www.atcfw.com/zunxuan.html">尊选资源</a></li>
+                    <!--  <li><a href="javascript:;">网站地图</a></li>
+            <li><a href="javascript:;">区县导航</a></li> -->
+                    <li><a href="http://www.atcfw.com/news/list-223-1.html">新闻资讯</a></li>
+                    <li><a href="http://www.atcfw.com/tax.html" target="_blank">环境保护税计算器</a></li>
+                    <li><a href="http://www.atcfw.com/help/default/id/4.html">法律声明</a></li>
+                    <li><a href="http://www.atcfw.com/help/default/id/7.html">帮助中心</a></li>
+                    <li><a href="http://www.atcfw.com/help/default/id/6.html">广告服务</a></li>
+                    <!--            <li><a href="javascript:;">城市加盟</a></li>-->
+                    <li><a href="http://www.atcfw.com/help/default/id/5.html">联系我们</a></li>
+                </ul>
+                <p>Copyright &copy; 2019 库房滴滴</p>
+                <p><span>浙ICP备14017628号</span> <span class="ml-10">公安备案：33011002013057</span> <span class="ml-10">增值电信业务经营许可证：浙B2-20140369</span></p>
+            </div>
+        </div>
+
+
+        <div style="display: none">
+            <script type="text/javascript" src="https://s22.cnzz.com/z_stat.php?id=1273397016&web_id=1273397016"></script>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var serverHost = getServerHost();
+    //获取验证码
+    document.getElementById("codes").onclick = function() {
+
+
+        var userphone = $("#userPhone").val();
+        var count = 60;
+
+        $.ajax({
+            url: serverHost + '/login/geCheckCode',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                userPhone: userphone,
+                type: 1
+            },
+            async: false,
+            success: function(data) {
+                if (userphone == '') {
+                    alert('请输入手机号');
+                } else if (!(/^1[3456789]\d{9}$/.test(userphone))) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                } else {
+                    localStorage.setItem('cg', userphone)
+                    $("#codes").attr('disabled', 'disabled');
+                    $("#codes").html(count + "秒后重试");
+                    var timer = setInterval(function() {
+                        count--;
+                        $("#codes").html(count + "秒后重试");
+                        if (count == 0) {
+                            clearInterval(timer);
+                            $("#codes").attr("disabled", false); //启用按钮  
+                            $("#codes").html("重新发送验证码");
+                            code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+                        }
+                    }, 1000);
+                }
+            }
+        });
+    }
+
+    //登录
+    document.getElementById("denglu").onclick = function() {
+        var userPhone = $("#userPhone").val();
+        var code = $("#code").val();
+        $.ajax({
+            url: serverHost + '/login/loginByCode',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                userPhone: userPhone,
+                code: code,
+            },
+            success: function(data) {
+                if (userPhone == '') {
+                    alert('请输入手机号')
+                    return false
+                } else if (!(/^1[3456789]\d{9}$/.test(userPhone))) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                } else if (userPhone != localStorage.cg) {
+                    alert('手机号码错误，请核对后重新输入');
+                    return false;
+                }
+                if (code == "") {
+                    alert('请输入验证码');
+                    return false;
+                } else if (data.code == 100106) {
+                    alert('验证码输入错误');
+                    return false;
+                } else if (data.code == 100104) {
+                    alert('验证码已过期');
+                    return false;
+                } else {
+                    window.location = './home.html';
+                    localStorage.setItem('login', userPhone);
+                    localStorage.setItem('token', data.data.token);
+                }
+            }
+        })
+    }
+    $('body').keydown(function() {
+        if (event.keyCode == 13) {
+            $('#denglu').click();
+        };
+
+    });
+</script>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="baidu-site-verification" content="7NGtawMkau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <title>库房滴滴</title>
+    <link rel="stylesheet" type="text/css" href="css/dichan.css">
+    <link rel="stylesheet" type="text/css" href="css/dibu.css">
+    <link rel="stylesheet" type="text/css" href="css/dialog.css">
+    <script src="./js/mDialogMin.js"></script>
+    <script src="./js/common.js"></script>
+
+    <script src="./js/iconfont.js"></script>
+    <script src="./js/iconfont1.js"></script>
+    <script src="./js/iconfont2.js"></script>
+    <script src="./js/iconfont3.js"></script>
+    <script src="./js/iconfont4.js"></script>
+    <script src="./js/iconfont5.js"></script>
+    <script src="./js/iconfont6.js"></script>
+    <script src="./js/iconfont7.js"></script>
+    <script src="./js/iconfont8.js"></script>
+    <script src="./js/iconfont9.js"></script>
+    <script src="./js/iconfont10.js"></script>
+    <script src="./js/iconfont11.js"></script>
+    <script src="./js/iconfont12.js"></script>
+    <script src="./js/jquery-1.4.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=YcOGuCXZOmSuEC3cKfDTbDlI"></script>
+
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            color: #8a8a8a;
+        }
+        
+        .main_nav .tab:nth-of-type(9) {
+            background-color: #f8b551;
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="header" class="[header_class]">
+            <div class="header_wapper">
+                <div class="top">
+                    <div class="container clearfix">
+                        <div class="left">
+                            专注厂房出租出售、仓库出租、工业土地转让出售、园区招商的O2O工业地产交易服务平台
+                        </div>
+                        <div class="right">
+                            <ul class="login_nav">
+                                <li style="color:#ef5636">
+                                    <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shouji" style="color:red"></use>
+                            </svg>
+                                    <a href="javascript:;" id="show" onmouseover="shouEr()" onmouseout="hideEr()" style="color:#ef5636">下载库房滴滴APP</a>
+                                    <div class="download" id="down" onclick="hidetext()" style="display: none">
+                                        <img src="./img/1556788963.png">
+                                    </div>
+                                </li>
+
+
+
+
+                                <li>
+                                    <a href="login.html" id="lo">登录</a>
+                                </li>
+                                <li>
+                                    <a href="zhuce.html" id="zh" onclick="qingchu()">注册</a>
+                                </li>
+                                <!-- <li>
+                                <a href="http://www.atcfw.com/help/default.html" target="_blank">帮助</a>
+                            </li>
+                            <li>
+                                <a href="http://www.atcfw.com/help/default/id/6.html" target="_blank">推广</a>
+                            </li>
+                            <li>
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-weibo"></use>
+                                </svg>
+                                <a href="http://www.weibo.com/antongcf" title="安通厂房网新浪微博" target='_blank'>新浪微博</a>
+                            </li> -->
+                                <li>
+                                    <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-weixin"></use>
+                            </svg>
+                                    <span class="has_down">
+                                <a href="javascript:;" onMouseOut="hideImg()" onmouseover="showImg()">微信</a>
+                                <div id="wxImg"
+                                    style="display:none;height:50px;background:#f00;position:absolute; z-index: 999; margin-top: 15px;margin-left: -150px;border: 1px solid #dcdcdc">
+                                    <img src="./img/weixinimg.jpg" width="250px" height="340px">
+                                </div>
+
+                            </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom" style="height:152px;">
+                    <div class="container clearfix" style="height: 100%;">
+                        <div class="search_wapper clearfix">
+                            <div id="home">
+                                <a href="home.html" target="_blank">
+                                    <img class="logo" src="./img/logo1.png" class="logo">
+                                    <h3>库房滴滴</h3>
+                                    <p>O2O工业地产交易服务平台</p>
+                                </a>
+                            </div>
+                            <a class="location" href="allcity.html">
+                                <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-dizhi"></use>
+                        </svg>
+                                <span>
+                            <div>
+                                {{city}}
+                            </div>
+                        </span>
+                            </a>
+                            <a class="publish_btn" id="asd" href="" target="_blank">
+                            免费发布信息
+                        </a>
+                            <div class="search_box clearfix">
+
+                                <input type="text" class="search-text" placeholder="请输入关键词查找，如杭州 单层厂房出租" id="bdcsMain" onkeypress="CheckInfo()" />
+
+                                <button type="button" class="search_btn" onclick="goSearch()" id="sou">
+                                <svg class="icon" aria-hidden="true">
+                                    <use xlink:href="#icon-sousuo" style="background-color:white"></use>
+                                </svg>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="main_nav">
+                            <a href="home.html" class="tab avtive">网站首页</a>
+                            <a href="yuanqu.html" class="tab">园区招商</a>
+                            <a href="changfang.html" class="tab">厂房</a>
+                            <a href="cangku.html" class="tab">仓库</a>
+                            <a href="tudi.html" class="tab">土地</a>
+                            <a href="qiuzuqiugou.html" class="tab">求租求购</a>
+                            <a href="agent.html" class="tab">经纪人
+                        <img src="./img/hot.gif" class="tag">
+                    </a>
+                            <a href="information.html" class="tab">地产资讯</a>
+                            <a href="dichan.html" class="tab">地产百科</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header id="baike-header">
+            <div class="wrapper">
+                <!-- 搜索框 -->
+                <h5>地产百科</h5>
+                <p>这里有来库房的问答专家，为您解决难题！</p>
+                <div class="search-box">
+                    <div class="find-answer">
+                        <input type="text" placeholder="请输入你的问题">
+                        <button class="search-answer"><i class="iconfont icon-sousuo" style="font-size: 12px"></i>找答案</button>
+                    </div>
+                    <button onclick="window.location.href='javascript:;'"><i
+                    class="iconfont icon-bianji" style="font-size: 12px"></i>去提问</button>
+                </div>
+            </div>
+        </header>
+        <div class="antong-content">
+            <div class="wrapper">
+                <!--左问题栏-->
+                <div class="question-left">
+                    <div class="typelist-wrap">
+                        <div class="type-list">
+                            <ul id="typess">
+
+                                <li><a href="javascript:;" @click="findData(1,1)">企业经营<span></span></a></li>
+
+
+                                <li><a href="javascript:;" @click="findData(1,2)">投资融资<span></span></a></li>
+
+
+                                <li><a href="javascript:;" @click="findData(1,3)">政策法规<span></span></a></li>
+
+
+                                <li><a href="javascript:;" @click="findData(1,4)">厂房装修<span></span></a></li>
+
+
+                                <li><a href="javascript:;" @click="findData(1,5)">地产交易<span></span></a></li>
+
+                                <!-- <li class="left-active"><a>企业经营<span></span></a></li>
+                                <li><a>厂房装修</a></li>
+                                <li><a>地产交易</a></li>
+                                <li><a>政策法规</a></li>
+                                <li><a>投资金融类</a></li> -->
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="question-list">
+                        <ul>
+                            <li v-for="item in question">
+                                <div class="question">
+                                    <a v-bind:href="'dichan1.html?elid='+item.elid">{{item.title}}</a>
+                                    <span style="color: #eb6100;border-color: #eb6100">已解决</span> </div>
+                                <div class="solution">
+                                    <span></span>
+                                </div>
+                                <div class="time-comment">
+                                    <div class="date-time">
+                                        <span class="date">{{item.createTime}}</span>
+                                        <!-- <span class="time"><span>14</span>:<span>46</span></span> -->
+                                    </div>
+                                    <div class="comment">
+                                        <a href="http://baike.atcfw.com/show-1122.html">
+                                            <i class="iconfont icon-xiaoxi"></i>
+                                            <span class="comment-num">{{item.huida}}</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--分页-->
+                        <div class="page-wapper text-c">
+                            <div class="pagination" id="Pagination">
+                                <a v-on:click="pageClickSub()">上一页</a>
+                                <a v-on:click="pageClickAdd()">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右问题栏-->
+                <div class="question-right">
+                    <!--热点问题-->
+                    <div class="hot-question">
+                        <ul>
+                            <li class="title">
+                                <span>热点问题</span>
+                                <span class="yellow-line"></span>
+                            </li>
+                            <li v-for="item in listss">
+                                <div class="discribe">
+                                    <a v-bind:href="'dichan1.html?elid='+item.elid">{{item.title}}</a>
+                                </div>
+                                <div class="resolve-time">
+                                    <div class="resolved">
+                                        <span style="color: #eb6100">已解决</span> </div>
+                                    <div class="time">
+                                        <span>{{item.createTime}}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--最新问题-->
+                    <div class="hot-question">
+                        <ul>
+                            <li class="title">
+                                <span>最新问题</span>
+                                <span class="yellow-line"></span>
+                            </li>
+                            <li v-for="item in lisst">
+                                <div class="discribe">
+                                    <a v-bind:href="'dichan1.html?elid='+item.elid">{{item.title}}</a>
+                                </div>
+                                <div class="resolve-time">
+                                    <div class="resolved" style="border-color: rgb(235, 97, 0)">
+                                        <span style="color: rgb(235, 97, 0);border-color: rgb(235, 97, 0)">已解决</span> </div>
+                                    <div class="time">
+                                        <span>{{item.createTime}}</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--扫公众号-->
+                    <!-- <div class="gongzhong">
+                    <div class="gongzhong-wrapper">
+                        <div class="atcfw-gzh">
+                            <span></span>
+                            <span>库房滴滴公众号</span>
+                            <span></span>
+                        </div>
+                        <div class="news-cf-server">
+                            <div class="news">
+                                <div class="img-container">
+                                    <img src="./img/fir.png" alt="">
+                                </div>
+                                <p class="adjective">最新最热新闻资讯</p>
+                            </div>
+                            <div class="cf-knowwladge">
+                                <div class="img-container">
+                                    <img src="./img/cf_knowladge.png" alt="">
+                                </div>
+                                <p class="adjective">丰富热门厂房知识 </p>
+                            </div>
+                            <div class="server">
+                                <div class="img-container">
+                                    <img src="./img/server_08.png" alt="">
+                                </div>
+                                <p class="adjective">专业优质厂房服务</p>
+                            </div>
+                        </div>
+                        <div class="erw-code">
+                            <div class="code-container">
+                                <img src="./img/qr_code.png" alt="">
+                            </div>
+                            <div class="follow">
+                                <span>扫一扫立即关注</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div class="new_footer">
+            <div class="container">
+                <div class="ewm" id="ewm">
+                    <img src="./img/1556788963.png">
+                    <p>下载库房滴滴APP</p>
+                    <div class="xs" onclick="xs()">
+                        <img src="./img/goright (1).png" style="width: 12px;height:12px;" id="xsimg">
+                    </div>
+                </div>
+                <!-- <div class="links_wapper">
+
+                    <ul class="lists">
+                        <h4>帮助中心</h4>
+                        <li><a href="">常见问题</a></li>
+                        <li><a href="">更多帮助</a></li>
+                        <li><a href="">意见反馈</a></li>
+                        <li><a href="">隐私权条款</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>关注我们</h4>
+                        <li><a href="" target='_blank'>新浪微博</a></li>
+                        <li><a href="" target='_blank'>熊掌号</a>
+                        </li>
+                        <li><a href="" title="安通厂房网APP下载" target='_blank'>APP下载</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>了解库房</h4>
+                        <li><a href="">了解库房滴滴</a></li>
+                        <li><a href="">加入库房滴滴</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>会员服务</h4>
+                        <li><a href="">会员介绍</a></li>
+                        <li><a href="">推广服务</a></li>
+                        <li><a href="" target="_blank">开通VIP服务</a></li>
+                    </ul>
+                    <div class="code">
+                        <p class="subtitle">扫一扫下载APP</p>
+                        <img src="./img/1556788963.png" />
+                        <p class="tip">库房滴滴APP</p>
+                    </div>
+                </div> -->
+                <div class="copyright_wapper">
+                    <p class="copyright">Copyright © 2019 库房滴滴 浙ICP备14017628号 公安备案：33011002013057 增值电信业务经营许可证：浙B2-20140369
+                    </p>
+                    <!-- <div class="tabs">
+                        <a href="">
+                            <img src="./img/link1.png" />
+                        </a>
+                        <a href="">
+                            <img src="./img/link2.png" />
+                        </a>
+                        <a href="">
+                            <img src="./img/link3.png" />
+                        </a>
+                        <a href="">
+                            <img src="./img/link4.png" />
+                        </a>
+                        <a href="">
+                            <img src="./img/link5.png" />
+                        </a>
+                        <a href="">
+                            <img src="./img/link6.png" />
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var serverHost = getServerHost();
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg); //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+
+    //接收URL中的参数booksId
+    var type = getUrlParam('type');
+    console.log('type:' + type);
+
+    function goSearch() {
+        var title = $("#bdcsMain").val();
+        $.ajax({
+            url: serverHost + '/fplHouse/queryFplHousePOByTitle',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                title: title,
+                token: localStorage.token
+            },
+            async: false,
+            success: function(data) {
+                window.location = './search.html?title=' + encodeURI(encodeURI(title))
+            },
+            error: function(error) {
+
+            }
+        })
+    }
+    $('body').keydown(function() {
+        if (event.keyCode == 13) {
+            $('#sou').click();
+        };
+    });
+
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            question: [],
+            pageNum: 1,
+            pageSize: 20,
+            totalPages: 1, //总页数,
+            listss: [],
+            lisst: [],
+            type: 1,
+            province: "",
+            city: localStorage.getItem("name"),
+            area: "",
+        },
+
+        methods: {
+
+            findData: function(pageNum, ty) {
+                if (ty != -1) {
+                    app.type = ty;
+                }
+                var _this = app;
+                $.ajax({
+                    url: serverHost + '/encyclopedia/pageEncyclopedia',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        pageNum: _this.pageNum,
+                        pageSize: _this.pageSize,
+                        type: _this.type,
+                    },
+                    async: false,
+                    success: function(data) {
+                        _this.question = data.data.content;
+                        _this.totalPages = data.data.totalPages;
+                    },
+                    error: function() {
+                        alert("asd");
+                    }
+                });
+                $.ajax({
+                    url: serverHost + '/encyclopedia/pageEncyclopedia',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        pageNum: _this.pageNum,
+                        pageSize: 5,
+                    },
+                    async: false,
+                    success: function(data) {
+                        _this.listss = data.data.content;
+                    }
+                });
+                $.ajax({
+                    url: serverHost + '/encyclopedia/pageEncyclopedia',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        pageNum: _this.pageNum,
+                        pageSize: 5,
+                    },
+                    async: false,
+                    success: function(data) {
+                        _this.lisst = data.data.content;
+                    }
+                })
+            },
+            pageClickSub: function(type) {
+                if (app.pageNum <= 1) {
+                    Dialog.init('已经是第一页了', 1100);
+                } else {
+                    app.pageNum = app.pageNum - 1;
+                    app.findData();
+                }
+            },
+            pageClickAdd: function(type) {
+                if (app.pageNum >= app.totalPages) {
+                    Dialog.init('没有更多了', 1100);
+                } else {
+                    app.pageNum = app.pageNum + 1;
+                    app.findData();
+                }
+            }
+        },
+    })
+    app.findData();
+</script>
+<script type="text/javascript">
+    $(function() {
+        $("#typess li a").click(function() {
+            $("#typess li a").removeClass('cname');
+            $(this).addClass('cname');
+        });
+    });
+</script>
+<script type="text/javascript">
+    function myFun(result) {
+        var cityName = result.name;
+        console.log(cityName);
+        //map.setCenter(cityName);
+
+        if (app.city == "null") {
+            app.city = cityName;
+        } else {
+            app.city = localStorage.getItem("name");
+        }
+
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+</script>
+<script src="./js/login.js"></script>
+<script>
+    var flag = true;
+
+    function xs() {
+        var img = document.getElementById("xsimg");
+        var box = document.getElementById('ewm');
+        if (flag) {
+            img.src = "./img/goright (2).png";
+            box.style.cssText = 'transform: translateX(180px);transition: all 0.5s ease-in-out 0s;'
+            flag = false;
+        } else {
+            img.src = "./img/goright (1).png";
+            box.style.cssText = 'transform: translateX(0);transition: all 0.5s ease-in-out 0s;'
+            flag = true;
+        }
+    }
+</script>
+<script type="text/javascript">
+    function showImg() {
+        document.getElementById("wxImg").style.display = 'block';
+    }
+
+    function hideImg() {
+        document.getElementById("wxImg").style.display = 'none';
+    }
+</script>
+<script type="text/javascript">
+    function shouEr() {
+        document.getElementById("down").style.display = "block";
+    }
+
+    function hideEr() {
+        document.getElementById("down").style.display = "none";
+    }
+</script>

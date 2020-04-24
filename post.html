@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>会员中心-库房滴滴</title>
+    <link rel="Shortcut Icon" href="./img/logo1.png" />
+    <link rel="stylesheet" type="text/css" href="./css/post.css" />
+    <script src="./js/iconfont111.js"></script>
+    <script src="./js/iconfont1111.js"></script>
+    <script src="./js/iconfont122.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/jquery-1.4.4.min.js"></script>
+    <script src="./js/common.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        
+        .RadioStyle input:checked+label {
+            background: url(./img/ico_checkon.svg) no-repeat right bottom;
+            border: 1px solid #00a4ff;
+            background-size: 21px 21px;
+            color: #00a4ff
+        }
+        
+        .Radio input:checked+label {
+            background: url(./img/ico_checkon.svg) no-repeat right bottom;
+            border: 1px solid #00a4ff;
+            background-size: 21px 21px;
+            color: #00a4ff
+        }
+    </style>
+</head>
+
+<body class="bg-interval">
+    <div id="all_wapper" style="width: 100%;">
+        <div id="header" class="[header_class]">
+            <div class="header_wapper">
+                <div class="top">
+                    <div class="container clearfix">
+                        <div class="left">
+                            专注厂房出租出售、仓库出租、工业土地转让出售、园区招商的O2O工业地产交易服务平台
+                        </div>
+                        <div class="right">
+                            <ul class="login_nav">
+                                <li>
+                                    <a href="mainIndex.html" title="点击进入会员中心" class="active">
+                                        <img src="./img/yonghu.png" style="width: 15px;height:15px;position:relative;top:3px;">{{phone}}</a>
+                                    &nbsp;
+                                    <a href="javascript:;" onclick="qingchu()">
+                                        退出
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="has_down">
+                                        <a href="javascript:;" onMouseOut="hideImg()" onmouseover="showImg()">
+                                            <svg class="icon" aria-hidden="true"
+                                                style="width: 17px;height:17px;position:relative;left:-3px;">
+                                                <use xlink:href="#icon-weixin"></use>
+                                            </svg>微信
+                                        </a>
+                                        <div id="wxImg"
+                                            style="display:none;height:50px;background:#f00;position:absolute; z-index: 999; margin-top: 15px;margin-left: -150px;border: 1px solid #dcdcdc">
+                                            <img src="./img/weixinimg.jpg" width="250px" height="340px">
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom other">
+                    <div class="container clearfix">
+                        <a href="./home.html">
+                            <img src="./img/logo1.png" class="titleimg">
+                            <div class="title" style="margin-left: 5px;">
+                                <p class="nem">库房滴滴</p>
+                                <p class="ooo">O2O工业地产交易服务平台</p>
+                            </div>
+                        </a>
+                        <div class="main_nav">
+                            <a href="home.html" class="tab  active ">网站首页</a>
+                            <a href="yuanqu.html" class="tab">园区招商</a>
+                            <a href="changfang.html" class="tab">厂房</a>
+                            <a href="cangku.html" class="tab">仓库</a>
+                            <a href="tudi.html" class="tab">土地</a>
+                            <a href="qiuzuqiugou.html" class="tab">求租求购</a>
+                            <a href="agent.html" class="tab">经纪人
+                                <img src="./img/hot.gif" class="tag">
+                            </a>
+                            <a href="information.html" class="tab">地产资讯</a>
+                            <a href="dichan.html" class="tab">地产百科</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-30">
+            <div class="container at-table">
+                <div class="new_left_wapper">
+                    <a href="mainIndex.html" class="new_left_item link first active">会员中心首页</a>
+                    <a href="post.html" class="asd">
+                        <div class="new_left_item toggle active" id="active">
+                            <span>
+                            信息发布
+                        </span>
+                        </div>
+                    </a>
+                    <a href="publish.html" class="asd">
+                        <div class="new_left_item toggle active">
+                            <span>
+                                我的信息
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="authentication" id="renzheng">
+                    <div class="layui-layer-title" style="text-align: center;font-size: 24px;padding: 0px 80px;height: 70px;line-height: 70px;background-color: rgb(255, 255, 255);cursor: move;border-bottom: 1px solid rgb(212, 212, 212);">
+                        会员认证</div>
+                    <div class="layui-layer-content">
+                        <div class="certification">
+                            <span class="certification-tip">为了保障您的个人权益及账号安全，同时根据《互联网实名制规定》的有关要求，用户需要进行实名制认证，同时认证资料经过双重加密，不会泄露任何个人隐私。</span>
+                            <a href="" class="certification-btn">重新认证</a>
+                            <p class="tip">我们将在1-3个工作日完成认证，届时您将会享受更优质的服务。</p>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="guanbi" onclick="guanbi()">x</a>
+                </div>
+                <div class="router-view-wapper f-r at-table-cell" id="router-view">
+                    <form class="site-selection-form form form-horizontal valid-form" id="freePublishForm">
+                        <p class="com-title">免费发布</p>
+                        <div class="row cl">
+                            <label class="form-label per15">分类：</label>
+                            <div class="RadioStyle">
+                                <div class="Block PaddingL" id="po">
+                                    <input type="radio" name="Storage" id="model1" value="1" checked/>
+                                    <label for="model1">厂房</label>
+                                    <input type="radio" name="Storage" id="model2" value="2" />
+                                    <label for="model2">仓库</label>
+                                    <input type="radio" name="Storage" id="model3" value="3" />
+                                    <label for="model3">土地</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row cl">
+                            <label class="form-label per15">意向：</label>
+                            <div class="Radio">
+                                <div class="Block PaddingL" id="poi">
+                                    <input type="radio" name="Storagea" id="model4" value="1" checked/>
+                                    <label for="model4">出租</label>
+                                    <input type="radio" name="Storagea" id="model5" value="2" />
+                                    <label for="model5">出售</label>
+                                    <input type="radio" name="Storagea" id="model6" value="3" />
+                                    <label for="model6">求租</label>
+                                    <input type="radio" name="Storagea" id="model7" value="4" />
+                                    <label for="model7">求售</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row cl">
+                            <span class="form-label per15">&nbsp;</span>
+                            <div class="formControls per75">
+                                <a class="btn btn-primary radius valid-btn" onclick="next()">下一步</a>
+                            </div>
+                        </div>
+                        <div class="mt-50 Huialert Huialert-success">
+                            <div class="tips-line">1、个人/企业会员可免费发布信息，系统默认上架您最早发布的1条信息，超出信息您可以选择委托代理或付费上架展示；</div>
+                            <div class="tips-line">2、中介/园区会员可免费发布1条信息，超出可购买VIP会员服务；</div>
+                            <div class="tips-line">3、购买置顶服务的信息不受系统审核状态影响，正常显示；</div>
+                            <div class="tips-line">前往购买
+                                <a href="" class="link">
+                                    <img src="./img/VIP.png" style="width: 15px;height:15px;position: relative;top: 3px;">
+                                    <b>会员包年服务</b>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="new_footer">
+            <div class="container">
+                <div class="ewm" id="ewm">
+                    <img src="./img/1556788963.png">
+                    <p>下载库房滴滴APP</p>
+                    <div class="xs" onclick="xs()">
+                        <img src="./img/goright (1).png" style="width: 12px;height:12px;" id="xsimg">
+                    </div>
+                </div>
+                <!-- <div class="links_wapper">
+
+                    <ul class="lists">
+                        <h4>帮助中心</h4>
+                        <li><a href="">常见问题</a></li>
+                        <li><a href="">更多帮助</a></li>
+                        <li><a href="">意见反馈</a></li>
+                        <li><a href="">隐私权条款</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>关注我们</h4>
+                        <li><a href="" title="安通厂房网新浪微博" target='_blank'>新浪微博</a></li>
+                        <li><a href="" title="安通厂房网熊掌号" target='_blank'>熊掌号</a>
+                        </li>
+                        <li><a href="" title="安通厂房网APP下载" target='_blank'>APP下载</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>了解库房</h4>
+                        <li><a href="">了解库房滴滴</a></li>
+                        <li><a href="">加入库房滴滴</a></li>
+                    </ul>
+                    <ul class="lists">
+                        <h4>会员服务</h4>
+                        <li><a href="">会员介绍</a></li>
+                        <li><a href="">推广服务</a></li>
+                        <li><a href="" target="_blank">开通VIP服务</a></li>
+                    </ul>
+                    <div class="code">
+                        <p class="subtitle">扫一扫下载APP</p>
+                        <img src="./img/1556788963.png" />
+                        <p class="tip">库房滴滴APP</p>
+                    </div>
+                </div> -->
+                <div class="copyright_wapper">
+                    <p class="copyright">Copyright © 2019 库房滴滴 浙ICP备14017628号 公安备案：33011002013057 增值电信业务经营许可证：浙B2-20140369
+                    </p>
+                    <!-- <div class="tabs">
+                            <a href="">
+                                <img src="./img/link1.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link2.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link3.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link4.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link5.png" />
+                            </a>
+                            <a href="">
+                                <img src="./img/link6.png" />
+                            </a>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var all_wapper = new Vue({
+        el: '#all_wapper',
+        data: {
+            phone: localStorage.getItem('login')
+        }
+    })
+
+    function qingchu() {
+        localStorage.clear();
+        window.location = "home.html";
+    }
+</script>
+<script type="text/javascript">
+    function showImg() {
+        document.getElementById("wxImg").style.display = 'block';
+    }
+
+    function hideImg() {
+        document.getElementById("wxImg").style.display = 'none';
+    }
+</script>
+<script>
+    var serveHost = getServerHost();
+
+    var app = new Vue({
+        el: '#all_wapper',
+        data: {
+            pro: [],
+            ci: [],
+            ar: [],
+            isEnd: 1
+        },
+        methods: {
+            findData: function() {
+                $.ajax({
+                    url: serveHost + '/realNameSystem/queryRealNameSystemByUid',
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        uid: localStorage.uid,
+                        token: localStorage.token
+                    },
+                    async: false,
+                    success: function(data) {
+                        isEnd = data.data.isEnd;
+                        if (isEnd == 1) {
+                            document.getElementById('renzheng').style.display = 'block'
+                        }
+                    }
+                })
+            }
+        },
+    })
+    app.findData();
+
+    function qingchu() {
+        localStorage.clear();
+        window.location = './home.html';
+    }
+
+    function next() {
+        var types = $('#po input:radio:checked').val();
+        var status = $('#poi input:radio:checked').val();
+        if (status == 1 || status == 2) {
+            window.location = './post_form.html?types=' + types + '&status=' + status
+        } else {
+            window.location = './post_form_qz.html?types=' + types + '&status=' + status
+        }
+    }
+
+    function guanbi() {
+        document.getElementById('renzheng').style.display = 'none'
+    }
+</script>
+<script>
+    var flag = true;
+
+    function xs() {
+        var img = document.getElementById("xsimg");
+        var box = document.getElementById('ewm');
+        if (flag) {
+            img.src = "./img/goright (2).png";
+            box.style.cssText = 'transform: translateX(180px);transition: all 0.5s ease-in-out 0s;'
+            flag = false;
+        } else {
+            img.src = "./img/goright (1).png";
+            box.style.cssText = 'transform: translateX(0);transition: all 0.5s ease-in-out 0s;'
+            flag = true;
+        }
+    }
+</script>
